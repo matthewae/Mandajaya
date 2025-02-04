@@ -132,7 +132,7 @@
             </div>
         </div>
     </section>
-    
+
     <footer class="bg-gray-800 py-6">
         <div class="container mx-auto text-center text-gray-300 px-4">
             <p>
@@ -151,8 +151,20 @@
                 <a class="text-gray-300 hover:text-white" href="#">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a class="text-gray-300 hover:text-white" href="#">
-                    <i class="fab fa-instagram"></i>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a class="text-gray-300 hover:text-white" href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-gray-300 hover:text-white" href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-gray-300 hover:text-white" href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-gray-300 hover:text-white" href="https://www.instagram.com/mandajaya_rekayasa_konstruksi?igsh=MW1kdTFxb2kycWNheg==">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div> <i class="fab fa-instagram"></i>
                 </a>
             </div>
         </div>
