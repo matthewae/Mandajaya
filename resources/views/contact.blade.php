@@ -132,7 +132,7 @@
             </div>
         </div>
     </section>
-    <!-- Footer -->
+    
     <footer class="bg-gray-800 py-6">
         <div class="container mx-auto text-center text-gray-300 px-4">
             <p>
