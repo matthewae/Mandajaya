@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Contact;
+
 
 class HomeController extends Controller
 {
@@ -21,7 +23,7 @@ class HomeController extends Controller
     {
         return view('service');
     }
-    
+
     public function contact()
     {
         return view('contact');
@@ -40,5 +42,18 @@ class HomeController extends Controller
     public function client()
     {
         return view('client');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'message' => 'required|string',
+        ]);
+
+        Contact::create($request->all());
+
+        return back()->with('success', 'Your message has been sent successfully!');
     }
 }
