@@ -7,10 +7,11 @@
     <title>
         Our Projects - Mandajaya Rekayasa Konstruksi
     </title>
-    <script src="https://cdn.tailwindcss.com">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <style>
         .fade-in {
             animation: fadeIn 2s ease-in-out;
@@ -30,6 +31,11 @@
             transform: translateY(-10px);
             transition: transform 0.3s ease-in-out;
         }
+
+        .map-container {
+            width: 100%;
+            height: 200px;
+        }
     </style>
 </head>
 
@@ -38,138 +44,69 @@
     <nav class="bg-gray-800 p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <img alt="Company logo" class="h-8 w-8 mr-2" height="32" src="https://storage.googleapis.com/a1aa/image/C1g_RHgcRjwfESr4HEnNiFuRTlolgrBoNTqasNcchfI.jpg" width="32" />
-                <a class="text-white text-2xl font-bold" href="#">
-                    Mandajaya Rekayasa Konstruksi
-                </a>
+                <img alt="Company logo" class="h-8 w-8 mr-2" height="32"
+                    src="https://storage.googleapis.com/a1aa/image/C1g_RHgcRjwfESr4HEnNiFuRTlolgrBoNTqasNcchfI.jpg"
+                    width="32" />
+                <a class="text-white text-2xl font-bold" href="#">Mandajaya Rekayasa Konstruksi</a>
             </div>
             <ul class="hidden md:flex space-x-4">
-                <li>
-                    <a class="text-gray-300 hover:text-white" href="/">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a class="text-gray-300 hover:text-white" href="contact">
-                        Contact Us
-                    </a>
-                </li>
-                <li>
-                    <a class="text-gray-300 hover:text-white" href="service">
-                        Services
-                    </a>
-                </li>
-                <li>
-                    <a class="text-gray-300 hover:text-white" href="project">
-                        Projects
-                    </a>
-                </li>
-                <li>
-                    <a class="text-gray-300 hover:text-white" href="team">
-                        Our Team
-                    </a>
-                </li>
-                <li>
-                    <a class="text-gray-300 hover:text-white" href="client">
-                        Our Clients
-                    </a>
-                </li>
+                <li><a class="text-gray-300 hover:text-white" href="/">Home</a></li>
+                <li><a class="text-gray-300 hover:text-white" href="contact">Contact Us</a></li>
+                <li><a class="text-gray-300 hover:text-white" href="service">Services</a></li>
+                <li><a class="text-gray-300 hover:text-white" href="project">Projects</a></li>
+                <li><a class="text-gray-300 hover:text-white" href="team">Our Team</a></li>
+                <li><a class="text-gray-300 hover:text-white" href="client">Our Clients</a></li>
             </ul>
-            <div class="md:hidden">
-                <button class="text-gray-300 focus:outline-none" id="menu-toggle">
-                    <i class="fas fa-bars">
-                    </i>
-                </button>
-            </div>
         </div>
-        <ul class="hidden md:hidden flex flex-col space-y-2 mt-4" id="mobile-menu">
-            <li>
-                <a class="text-gray-300 hover:text-white" href="/">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a class="text-gray-300 hover:text-white" href="contact">
-                    Contact Us
-                </a>
-            </li>
-            <li>
-                <a class="text-gray-300 hover:text-white" href="service">
-                    Services
-                </a>
-            </li>
-            <li>
-                <a class="text-gray-300 hover:text-white" href="project">
-                    Projects
-                </a>
-            </li>
-            <li>
-                <a class="text-gray-300 hover:text-white" href="team">
-                    Our Team
-                </a>
-            </li>
-            <li>
-                <a class="text-gray-300 hover:text-white" href="client">
-                    Our Clients
-                </a>
-            </li>
-        </ul>
     </nav>
+
     <!-- Projects Section -->
     <section class="py-12 bg-gray-100 fade-in">
         <div class="container mx-auto text-center px-4">
-            <h2 class="text-3xl font-bold mb-6">
-                Our Projects
-            </h2>
+            <h2 class="text-3xl font-bold mb-6">Our Projects</h2>
             <div class="flex flex-wrap justify-center">
+                <!-- Commercial Building -->
                 <div class="w-full md:w-1/3 p-4 card">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="A modern commercial building" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/seYcKjF8wP_Wk6O1puBWMiqbQI2rmvp166DUnlAtO8g.jpg" width="300" />
-                        <h3 class="text-xl font-bold mb-2">
-                            Commercial Building
-                        </h3>
+                        <img alt="A modern commercial building" class="w-full h-48 object-cover mb-4"
+                            src="https://storage.googleapis.com/a1aa/image/seYcKjF8wP_Wk6O1puBWMiqbQI2rmvp166DUnlAtO8g.jpg" />
+                        <h3 class="text-xl font-bold mb-2">Commercial Building</h3>
                         <p class="text-gray-700 mb-4">
                             A state-of-the-art commercial building designed and managed by our expert team.
                         </p>
-                        <div class="w-full h-48">
-                            <iframe allowfullscreen="" class="w-full h-full" frameborder="0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Commercial+Building+Location" style="border:0">
-                            </iframe>
-                        </div>
+                        <div id="map1" class="map-container"></div>
                     </div>
                 </div>
+
+                <!-- Residential Complex -->
                 <div class="w-full md:w-1/3 p-4 card">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="A luxury residential complex" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/fV8LLHNOLa443yshurbQ0Zy-uUJeUW_YsVfNbFbJ5zY.jpg" width="300" />
-                        <h3 class="text-xl font-bold mb-2">
-                            Residential Complex
-                        </h3>
+                        <img alt="A luxury residential complex" class="w-full h-48 object-cover mb-4"
+                            src="https://storage.googleapis.com/a1aa/image/fV8LLHNOLa443yshurbQ0Zy-uUJeUW_YsVfNbFbJ5zY.jpg" />
+                        <h3 class="text-xl font-bold mb-2">Residential Complex</h3>
                         <p class="text-gray-700 mb-4">
                             A luxury residential complex featuring modern amenities and sustainable design.
                         </p>
-                        <div class="w-full h-48">
-                            <iframe allowfullscreen="" class="w-full h-full" frameborder="0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Residential+Complex+Location" style="border:0">
-                            </iframe>
-                        </div>
+                        <div id="map2" class="map-container"></div>
                     </div>
                 </div>
+
+                <!-- Industrial Facility -->
                 <div class="w-full md:w-1/3 p-4 card">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="An industrial facility with machinery" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/BRMUZitZ8CbAo1ZZYxgEj4kBzBMkBLsMyNtW5sEl5Z8.jpg" width="300" />
-                        <h3 class="text-xl font-bold mb-2">
-                            Industrial Facility
-                        </h3>
+                        <img alt="An industrial facility with machinery" class="w-full h-48 object-cover mb-4"
+                            src="https://storage.googleapis.com/a1aa/image/BRMUZitZ8CbAo1ZZYxgEj4kBzBMkBLsMyNtW5sEl5Z8.jpg" />
+                        <h3 class="text-xl font-bold mb-2">Industrial Facility</h3>
                         <p class="text-gray-700 mb-4">
                             A high-tech industrial facility built to meet the needs of modern manufacturing.
                         </p>
-                        <div class="w-full h-48">
-                            <iframe allowfullscreen="" class="w-full h-full" frameborder="0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Industrial+Facility+Location" style="border:0">
-                            </iframe>
-                        </div>
+                        <div id="map3" class="map-container"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Footer -->
     <footer class="bg-gray-800 py-6">
         <div class="container mx-auto text-center text-gray-300 px-4">
@@ -199,14 +136,20 @@
             </div>
         </div>
     </footer>
+
     <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.remove('hidden');
-            } else {
-                mobileMenu.classList.add('hidden');
-            }
+        function initMap(mapId, lat, lng) {
+            var map = L.map(mapId).setView([lat, lng], 15);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+            L.marker([lat, lng]).addTo(map);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            initMap("map1", -6.9175, 107.6191);
+            initMap("map2", -6.9214, 107.6079);
+            initMap("map3", -6.9308, 107.6186);
         });
     </script>
 </body>

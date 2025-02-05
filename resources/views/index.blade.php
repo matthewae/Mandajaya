@@ -151,9 +151,9 @@
                 <p class="text-lg mb-6">
                     Expert construction consulting services for your projects
                 </p>
-                <a class="bg-yellow-500 text-gray-800 px-6 py-3 rounded-full font-bold" href="#">
+                <!-- <a class="bg-yellow-500 text-gray-800 px-6 py-3 rounded-full font-bold" href="#">
                     Get Started
-                </a>
+                </a> -->
             </div>
         </div>
     </section>
