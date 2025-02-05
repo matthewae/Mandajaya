@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -176,10 +177,10 @@
                 © 2023 Mandajaya Rekayasa Konstruksi. All rights reserved.
             </p>
             <p class="mt-2">
-                1234 Construction Lane, Buildtown, BT 56789
+                Jl.Kota Mas 1 no.18 - Kota Cimahi - Jawa Barat - 40511
             </p>
             <div class="flex justify-center space-x-4 mt-4">
-                <a class="text-gray-300 hover:text-white" href="#">
+                <a class="text-gray-300 hover:text-white" href="https://www.facebook.com/profile.php?id=61569553317515">
                     <i class="fab fa-facebook-f">
                     </i>
                 </a>
@@ -191,7 +192,7 @@
                     <i class="fab fa-linkedin-in">
                     </i>
                 </a>
-                <a class="text-gray-300 hover:text-white" href="#">
+                <a class="text-gray-300 hover:text-white" href="https://www.instagram.com/mandajaya_rekayasa_konstruksi?igsh=MW1kdTFxb2kycWNheg==">
                     <i class="fab fa-instagram">
                     </i>
                 </a>

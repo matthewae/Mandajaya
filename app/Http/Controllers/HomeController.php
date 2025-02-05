@@ -17,28 +17,28 @@ class HomeController extends Controller
         return view('index', compact('services'));
     }
 
-    public function about()
+    public function service()
     {
-        return view('about');
+        return view('service');
     }
     
-    public function consultation()
+    public function contact()
     {
-        return view('consultation');
+        return view('contact');
     }
 
-    public function building()
+    public function team()
     {
-        return view('building');
+        return view('team');
     }
 
-    public function renovation()
+    public function project()
     {
-        return view('renovation');
+        return view('project');
     }
 
-    public function interior()
+    public function client()
     {
-        return view('interior');
+        return view('client');
     }
 }

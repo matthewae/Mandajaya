@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -139,20 +140,11 @@
                 © 2023 Mandajaya Rekayasa Konstruksi. All rights reserved.
             </p>
             <p class="mt-2">
-                jalan kota mas 1 no.18 - Kota Cimahi - Jawa Barat,
+                Jl.Kota Mas 1 no.18 - Kota Cimahi - Jawa Barat - 40511
             </p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a class="text-gray-300 hover:text-white" href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a class="text-gray-300 hover:text-white" href="#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a class="text-gray-300 hover:text-white" href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+            
                 <div class="flex justify-center space-x-4 mt-4">
-                    <a class="text-gray-300 hover:text-white" href="#">
+                    <a class="text-gray-300 hover:text-white" href="https://www.facebook.com/profile.php?id=61569553317515">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                     <a class="text-gray-300 hover:text-white" href="#">
@@ -164,8 +156,7 @@
                     <a class="text-gray-300 hover:text-white" href="https://www.instagram.com/mandajaya_rekayasa_konstruksi?igsh=MW1kdTFxb2kycWNheg==">
                         <i class="fab fa-instagram"></i>
                     </a>
-                </div> <i class="fab fa-instagram"></i>
-                </a>
+                </div>
             </div>
         </div>
     </footer>

@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>
-        Construction Consultant Company
+        Mandajaya Rekayasa Konstruksi
     </title>
     <script src="https://cdn.tailwindcss.com">
     </script>
@@ -48,7 +49,7 @@
 </head>
 
 <body class="font-roboto">
-    <!-- Navbar -->
+
     <nav class="bg-gray-800 p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
@@ -64,23 +65,28 @@
                     </a>
                 </li>
                 <li>
-                    <a class="text-gray-300 hover:text-white" href="#">
+                    <a class="text-gray-300 hover:text-white" href="contact">
                         Contact Us
                     </a>
                 </li>
                 <li>
-                    <a class="text-gray-300 hover:text-white" href="#">
+                    <a class="text-gray-300 hover:text-white" href="service">
                         Services
                     </a>
                 </li>
                 <li>
-                    <a class="text-gray-300 hover:text-white" href="#">
+                    <a class="text-gray-300 hover:text-white" href="project">
                         Projects
                     </a>
                 </li>
                 <li>
-                    <a class="text-gray-300 hover:text-white" href="our-team.html">
+                    <a class="text-gray-300 hover:text-white" href="team">
                         Our Team
+                    </a>
+                </li>
+                <li>
+                    <a class="text-gray-300 hover:text-white" href="client">
+                        Clients
                     </a>
                 </li>
             </ul>
@@ -98,28 +104,28 @@
                 </a>
             </li>
             <li>
-                <a class="text-gray-300 hover:text-white" href="#">
+                <a class="text-gray-300 hover:text-white" href="contact">
                     Contact Us
                 </a>
             </li>
             <li>
-                <a class="text-gray-300 hover:text-white" href="#">
+                <a class="text-gray-300 hover:text-white" href="service">
                     Services
                 </a>
             </li>
             <li>
-                <a class="text-gray-300 hover:text-white" href="#">
+                <a class="text-gray-300 hover:text-white" href="project">
                     Projects
                 </a>
             </li>
             <li>
-                <a class="text-gray-300 hover:text-white" href="our-team.html">
+                <a class="text-gray-300 hover:text-white" href="team">
                     Our Team
                 </a>
             </li>
             <li>
-                <a class="text-gray-300 hover:text-white" href="#">
-                    Our Clients
+                <a class="text-gray-300 hover:text-white" href="client">
+                    Clients
                 </a>
             </li>
         </ul>
@@ -333,7 +339,7 @@
                 © 2023 Mandajaya Rekayasa Konstruksi. All rights reserved.
             </p>
             <p class="mt-2">
-                jl.kota mas 1 no.18 - Kota Cimahi - Jawa Barat, 40511
+                Jl.Kota Mas 1 no.18 - Kota Cimahi - Jawa Barat - 40511
             </p>
             <div class="flex justify-center space-x-4 mt-4">
                 <a class="text-gray-300 hover:text-white" href="https://www.facebook.com/profile.php?id=61569553317515">

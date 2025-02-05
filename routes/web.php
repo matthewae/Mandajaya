@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\HomeController;
-Route::get('/index', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'about']);
-Route::get('/consultation', [HomeController::class, 'consultation']);
-Route::get('/building', [HomeController::class, 'building']);
-Route::get('/renovation', [HomeController::class, 'renovation']);
-Route::get('/interior', [HomeController::class, 'interior']);
+Route::get('/project', [HomeController::class, 'project']);
+Route::get('/team', [HomeController::class, 'team']);
+Route::get('/client', [HomeController::class, 'client']);
+Route::get('/service', [HomeController::class, 'service']);
 Route::get('/contact', [HomeController::class, 'contact']);
 
