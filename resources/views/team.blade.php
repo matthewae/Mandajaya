@@ -45,32 +45,32 @@
             </div>
             <ul class="hidden md:flex space-x-4">
                 <li>
-                    <a class="text-gray-300 hover:text-white" href="#">
+                    <a class="text-gray-300 hover:text-white" href="/">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a class="text-gray-300 hover:text-white" href="#">
+                    <a class="text-gray-300 hover:text-white" href="contact">
                         Contact Us
                     </a>
                 </li>
                 <li>
-                    <a class="text-gray-300 hover:text-white" href="#">
+                    <a class="text-gray-300 hover:text-white" href="service">
                         Services
                     </a>
                 </li>
                 <li>
-                    <a class="text-gray-300 hover:text-white" href="#">
+                    <a class="text-gray-300 hover:text-white" href="project">
                         Projects
                     </a>
                 </li>
                 <li>
-                    <a class="text-gray-300 hover:text-white" href="our-team.html">
+                    <a class="text-gray-300 hover:text-white" href="team">
                         Our Team
                     </a>
                 </li>
                 <li>
-                    <a class="text-gray-300 hover:text-white" href="#">
+                    <a class="text-gray-300 hover:text-white" href="client">
                         Our Clients
                     </a>
                 </li>
@@ -84,32 +84,32 @@
         </div>
         <ul class="hidden md:hidden flex flex-col space-y-2 mt-4" id="mobile-menu">
             <li>
-                <a class="text-gray-300 hover:text-white" href="#">
+                <a class="text-gray-300 hover:text-white" href="/">
                     Home
                 </a>
             </li>
             <li>
-                <a class="text-gray-300 hover:text-white" href="#">
+                <a class="text-gray-300 hover:text-white" href="contact">
                     Contact Us
                 </a>
             </li>
             <li>
-                <a class="text-gray-300 hover:text-white" href="#">
+                <a class="text-gray-300 hover:text-white" href="service">
                     Services
                 </a>
             </li>
             <li>
-                <a class="text-gray-300 hover:text-white" href="#">
+                <a class="text-gray-300 hover:text-white" href="project">
                     Projects
                 </a>
             </li>
             <li>
-                <a class="text-gray-300 hover:text-white" href="our-team.html">
+                <a class="text-gray-300 hover:text-white" href="team">
                     Our Team
                 </a>
             </li>
             <li>
-                <a class="text-gray-300 hover:text-white" href="#">
+                <a class="text-gray-300 hover:text-white" href="client">
                     Our Clients
                 </a>
             </li>

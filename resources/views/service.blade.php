@@ -42,7 +42,7 @@
             </div>
             <ul class="hidden md:flex space-x-4">
                 <li>
-                    <a class="text-gray-300 hover:text-white" href="#">
+                    <a class="text-gray-300 hover:text-white" href="/">
                         Home
                     </a>
                 </li>
@@ -52,7 +52,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="text-gray-300 hover:text-white" href="#">
+                    <a class="text-gray-300 hover:text-white" href="service">
                         Services
                     </a>
                 </li>
@@ -80,7 +80,7 @@
         </div>
         <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 mt-4">
             <li>
-                <a class="text-gray-300 hover:text-white" href="#">
+                <a class="text-gray-300 hover:text-white" href="/">
                     Home
                 </a>
             </li>
@@ -90,7 +90,7 @@
                 </a>
             </li>
             <li>
-                <a class="text-gray-300 hover:text-white" href="#">
+                <a class="text-gray-300 hover:text-white" href="service">
                     Services
                 </a>
             </li>

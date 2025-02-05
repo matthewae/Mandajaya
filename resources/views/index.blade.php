@@ -164,7 +164,7 @@
                 About Us
             </h2>
             <div class="flex flex-wrap justify-center">
-                <a class="w-full md:w-1/3 p-4 card" href="our-team.html">
+                <a class="w-full md:w-1/3 p-4 card" href="team">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
                         <img alt="A team of construction consultants in a meeting" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/VkfnTaHx8Ms9h7goIZNN_bZAvjX4IVvynWI1esfv6pw.jpg" width="300" />
                         <h3 class="text-xl font-bold mb-2">
@@ -175,7 +175,7 @@
                         </p>
                     </div>
                 </a>
-                <a class="w-full md:w-1/3 p-4 card" href="#">
+                <a class="w-full md:w-1/3 p-4 card" href="project">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
                         <img alt="A construction site with workers and machinery" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/XhHRNsT_PydtlbeP8FLp-aT0ykQ01SRkYd700FJXAbo.jpg" width="300" />
                         <h3 class="text-xl font-bold mb-2">
@@ -186,7 +186,7 @@
                         </p>
                     </div>
                 </a>
-                <a class="w-full md:w-1/3 p-4 card" href="#">
+                <a class="w-full md:w-1/3 p-4 card" href="/">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
                         <img alt="A blueprint and construction tools on a table" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/xhGlafHv9-UB_Qk6X0nW9YjoomS1u90eWqCJObEBk5k.jpg" width="300" />
                         <h3 class="text-xl font-bold mb-2">
