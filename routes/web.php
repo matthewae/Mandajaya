@@ -22,6 +22,8 @@ Route::group(['prefix' => '/'], function () {
     Route::get('client', [HomeController::class, 'client'])->name('client');
     Route::get('service', [HomeController::class, 'service'])->name('service');
     Route::get('contact', [HomeController::class, 'contact'])->name('contact');
+    Route::get('vision', [HomeController::class, 'vision'])->name('vision');
+
 });
 
 // Contact Form Route

@@ -44,6 +44,11 @@ class HomeController extends Controller
         return view('client');
     }
 
+    public function vision()
+    {
+        return view('vision');
+    }
+
     public function store(Request $request)
     {
         $request->validate([

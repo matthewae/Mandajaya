@@ -155,7 +155,7 @@
                         </p>
                     </div>
                 </a>
-                <a class="w-full md:w-1/3 p-4 card" href="/">
+                <a class="w-full md:w-1/3 p-4 card" href="vision">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
                         <img alt="A blueprint and construction tools on a table" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/xhGlafHv9-UB_Qk6X0nW9YjoomS1u90eWqCJObEBk5k.jpg" width="300" />
                         <h3 class="text-xl font-bold mb-2">
@@ -177,52 +177,60 @@
             </h2>
             <div class="flex flex-wrap justify-center">
                 <div class="w-full md:w-1/4 p-4">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <i class="fas fa-hard-hat text-4xl text-yellow-500 mb-4">
-                        </i>
-                        <h3 class="text-xl font-bold mb-2">
-                            Project Management
-                        </h3>
-                        <p class="text-gray-700">
-                            Comprehensive project management services to ensure your project is completed on time and within budget.
-                        </p>
-                    </div>
+                    <a href="service" class="block">
+                        <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
+                            <i class="fas fa-hard-hat text-4xl text-yellow-500 mb-4">
+                            </i>
+                            <h3 class="text-xl font-bold mb-2">
+                                Project Management
+                            </h3>
+                            <p class="text-gray-700">
+                                Comprehensive project management services to ensure your project is completed on time and within budget.
+                            </p>
+                        </div>
+                    </a>
                 </div>
                 <div class="w-full md:w-1/4 p-4">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <i class="fas fa-drafting-compass text-4xl text-yellow-500 mb-4">
-                        </i>
-                        <h3 class="text-xl font-bold mb-2">
-                            Design Consultation
-                        </h3>
-                        <p class="text-gray-700">
-                            Expert design consultation to help you create functional and aesthetically pleasing spaces.
-                        </p>
-                    </div>
+                    <a href="service" class="block">
+                        <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
+                            <i class="fas fa-drafting-compass text-4xl text-yellow-500 mb-4">
+                            </i>
+                            <h3 class="text-xl font-bold mb-2">
+                                Design Consultation
+                            </h3>
+                            <p class="text-gray-700">
+                                Expert design consultation to help you create functional and aesthetically pleasing spaces.
+                            </p>
+                        </div>
+                    </a>
                 </div>
                 <div class="w-full md:w-1/4 p-4">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <i class="fas fa-tools text-4xl text-yellow-500 mb-4">
-                        </i>
-                        <h3 class="text-xl font-bold mb-2">
-                            Construction Supervision
-                        </h3>
-                        <p class="text-gray-700">
-                            Professional supervision to ensure that all construction activities are carried out to the highest standards.
-                        </p>
-                    </div>
+                    <a href="service" class="block">
+                        <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
+                            <i class="fas fa-tools text-4xl text-yellow-500 mb-4">
+                            </i>
+                            <h3 class="text-xl font-bold mb-2">
+                                Construction Supervision
+                            </h3>
+                            <p class="text-gray-700">
+                                Professional supervision to ensure that all construction activities are carried out to the highest standards.
+                            </p>
+                        </div>
+                    </a>
                 </div>
                 <div class="w-full md:w-1/4 p-4">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <i class="fas fa-building text-4xl text-yellow-500 mb-4">
-                        </i>
-                        <h3 class="text-xl font-bold mb-2">
-                            Quality Assurance
-                        </h3>
-                        <p class="text-gray-700">
-                            Rigorous quality assurance processes to ensure the durability and safety of your construction projects.
-                        </p>
-                    </div>
+                    <a href="service" class="block">
+                        <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
+                            <i class="fas fa-building text-4xl text-yellow-500 mb-4">
+                            </i>
+                            <h3 class="text-xl font-bold mb-2">
+                                Quality Assurance
+                            </h3>
+                            <p class="text-gray-700">
+                                Rigorous quality assurance processes to ensure the durability and safety of your construction projects.
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

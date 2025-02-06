@@ -87,10 +87,110 @@
             <h2 class="text-3xl font-bold mb-6">
                 Our Team
             </h2>
-            <div class="flex flex-wrap justify-center">
+            <!-- Founders -->
+            <h3 class="text-2xl font-bold mb-4">
+                Founders
+            </h3>
+            <div class="flex flex-wrap justify-center mb-12">
                 <div class="w-full md:w-1/3 p-4 card">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="Portrait of John Doe, Project Manager" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/RDxY_QfT1BvhJRWGAEEmBBeRO3wwqTGmpB2kws2POq4.jpg" width="300" />
+                        <img alt="Portrait of John Doe, Founder and CEO" class="w-full h-64 object-cover mb-4" height="256" src="https://storage.googleapis.com/a1aa/image/Z4uwvphkmZKGGoxWqyz4DmpIBef1kzfxJkmLfpo2n9c.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            John Doe
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Founder &amp; CEO
+                        </p>
+                        <p class="text-gray-700">
+                            John has over 20 years of experience in the construction industry and is the visionary behind our company.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="Portrait of Jane Smith, Co-Founder and COO" class="w-full h-64 object-cover mb-4" height="256" src="https://storage.googleapis.com/a1aa/image/1w8b2Pk0ZBhruWcTFdXRP_QVVeiXNt-2z_7g0_XukOY.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Jane Smith
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Co-Founder &amp; COO
+                        </p>
+                        <p class="text-gray-700">
+                            Jane oversees the daily operations and ensures that our projects run smoothly and efficiently.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="Portrait of Michael Brown, Co-Founder and CFO" class="w-full h-64 object-cover mb-4" height="256" src="https://storage.googleapis.com/a1aa/image/jdzTtnwfCpb3tZFPmfMYb4ZmqV3ZysS9YqQ0uvCFnA0.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Michael Brown
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Co-Founder &amp; CFO
+                        </p>
+                        <p class="text-gray-700">
+                            Michael manages the financial aspects of the company, ensuring fiscal responsibility and growth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Advisors -->
+            <!-- <h3 class="text-2xl font-bold mb-4">
+                Advisors
+            </h3>
+            <div class="flex flex-wrap justify-center mb-12">
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="Portrait of Emily Davis, Advisor" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/AIZerADyQsRi9oZY7PMTN7FfedpL3cwQaSTqYDxQQLU.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Emily Davis
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Advisor
+                        </p>
+                        <p class="text-gray-700">
+                            Emily provides strategic advice and guidance to help steer the company towards success.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="Portrait of David Wilson, Advisor" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/iITL6fdse-w44lfAVMO2nNSZZG2r4EAmggeYe4UUZQA.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            David Wilson
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Advisor
+                        </p>
+                        <p class="text-gray-700">
+                            David brings a wealth of experience in quality assurance and project management.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="Portrait of Sarah Johnson, Advisor" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/DncF6qXAbLwa_VpqftcLgf59HttfwBQeFsmxse98Yck.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Sarah Johnson
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Advisor
+                        </p>
+                        <p class="text-gray-700">
+                            Sarah provides financial analysis and strategic planning expertise.
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Experts -->
+            <h3 class="text-2xl font-bold mb-4">
+                Experts
+            </h3>
+            <div class="flex flex-wrap justify-center mb-12">
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="Portrait of John Doe, Project Manager" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/58_rJirqJUCrFjbK-JRYxNxdVa23JJFoGCIq08HRlb4.jpg" width="300" />
                         <h3 class="text-xl font-bold mb-2">
                             John Doe
                         </h3>
@@ -104,7 +204,7 @@
                 </div>
                 <div class="w-full md:w-1/3 p-4 card">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="Portrait of Jane Smith, Lead Architect" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/e31D7-Arr72a-bNeJxwTK0uZgLcyIoXLN_n1mOgNzVY.jpg" width="300" />
+                        <img alt="Portrait of Jane Smith, Lead Architect" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/wGh2zXMsGIMx98jqq9xCUCpIdWcUg2OEeKFE6wrSxCo.jpg" width="300" />
                         <h3 class="text-xl font-bold mb-2">
                             Jane Smith
                         </h3>
@@ -118,7 +218,7 @@
                 </div>
                 <div class="w-full md:w-1/3 p-4 card">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="Portrait of Michael Brown, Construction Supervisor" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/2xN4nXdDyH1RbRtfGfOftQvO4Lu-RcHRN7wdIflpeHs.jpg" width="300" />
+                        <img alt="Portrait of Michael Brown, Construction Supervisor" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/R-tpEYSnwRmxr50CpHeIbGSRqn5yZUrt2UZxLsEFXf4.jpg" width="300" />
                         <h3 class="text-xl font-bold mb-2">
                             Michael Brown
                         </h3>
@@ -132,7 +232,7 @@
                 </div>
                 <div class="w-full md:w-1/3 p-4 card">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="Portrait of Emily Davis, Design Consultant" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/Q52Alzd7NPwygC8icFnMoPcDs7Nfh8iXXjOrgaaT29g.jpg" width="300" />
+                        <img alt="Portrait of Emily Davis, Design Consultant" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/C6ENz2is4itlf83cvngelGU0Q7PjAW1V3xPlpq6hRKU.jpg" width="300" />
                         <h3 class="text-xl font-bold mb-2">
                             Emily Davis
                         </h3>
@@ -146,7 +246,7 @@
                 </div>
                 <div class="w-full md:w-1/3 p-4 card">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="Portrait of David Wilson, Quality Assurance Manager" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/rTD-I_TEK7V3pHoEPTbX34DQgnFHN-8vQRnL8R-wNZ4.jpg" width="300" />
+                        <img alt="Portrait of David Wilson, Quality Assurance Manager" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/8cpUC2nHxvKBPxWe52qQcb_PZFPsF4k3PQ-d3Jo7ymQ.jpg" width="300" />
                         <h3 class="text-xl font-bold mb-2">
                             David Wilson
                         </h3>
@@ -158,9 +258,15 @@
                         </p>
                     </div>
                 </div>
+            </div>
+            <!-- Staff -->
+            <h3 class="text-2xl font-bold mb-4">
+                Staff
+            </h3>
+            <div class="flex flex-wrap justify-center">
                 <div class="w-full md:w-1/3 p-4 card">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="Portrait of Sarah Johnson, Financial Analyst" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/ieuxD_H6Ss3J8pskvrijIKKBwtJsE4o27g2QpmlzaSA.jpg" width="300" />
+                        <img alt="Portrait of Sarah Johnson, Financial Analyst" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/Koaws9GC3mBe5rIzrAdn9ELXnUdG7b7D6mlPuAdNyNA.jpg" width="300" />
                         <h3 class="text-xl font-bold mb-2">
                             Sarah Johnson
                         </h3>
@@ -169,6 +275,76 @@
                         </p>
                         <p class="text-gray-700">
                             Sarah provides financial analysis and budgeting expertise to ensure the financial success of our projects.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="Portrait of John Doe, Staff Member" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/a33wk-58zXK8TPPi7tkOj5ZnKYvMAmqBgqyC8Zr9UlI.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            John Doe
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Staff Member
+                        </p>
+                        <p class="text-gray-700">
+                            John is a dedicated team member who supports various projects and ensures smooth operations.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="Portrait of Jane Smith, Staff Member" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/FlEnDH2myV0hHDJFpjHIw7FeaHx3O0zloBFz1CWy6BA.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Jane Smith
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Staff Member
+                        </p>
+                        <p class="text-gray-700">
+                            Jane is a key player in our team, contributing her skills and expertise to various projects.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="Portrait of Michael Brown, Staff Member" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/fv8YkifnZpn2OxU6PJ3B8Q5Jsyl9uC9MvlJelhjZifs.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Michael Brown
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Staff Member
+                        </p>
+                        <p class="text-gray-700">
+                            Michael is a reliable team member who ensures that all tasks are completed efficiently.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="Portrait of Emily Davis, Staff Member" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/z6m57vf5iQew7k92qHzsXpDHjJi1DR3T8liAANP3UbY.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Emily Davis
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Staff Member
+                        </p>
+                        <p class="text-gray-700">
+                            Emily is a dedicated team member who supports various projects and ensures smooth operations.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="Portrait of David Wilson, Staff Member" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/-BMTdgGSJ9Hi9fL1JONZS1bGjUBtAiJrDWAef3eHrPY.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            David Wilson
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Staff Member
+                        </p>
+                        <p class="text-gray-700">
+                            David is a key player in our team, contributing his skills and expertise to various projects.
                         </p>
                     </div>
                 </div>

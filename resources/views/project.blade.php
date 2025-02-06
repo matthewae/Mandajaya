@@ -91,44 +91,80 @@
     <!-- Projects Section -->
     <section class="py-12 bg-gray-100 fade-in">
         <div class="container mx-auto text-center px-4">
-            <h2 class="text-3xl font-bold mb-6">Our Projects</h2>
+            <h2 class="text-3xl font-bold mb-6">
+                Our Projects
+            </h2>
             <div class="flex flex-wrap justify-center">
                 <!-- Commercial Building -->
                 <div class="w-full md:w-1/3 p-4 card">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="A modern commercial building" class="w-full h-48 object-cover mb-4"
-                            src="https://storage.googleapis.com/a1aa/image/seYcKjF8wP_Wk6O1puBWMiqbQI2rmvp166DUnlAtO8g.jpg" />
-                        <h3 class="text-xl font-bold mb-2">Commercial Building</h3>
+                        <img alt="A modern commercial building" class="w-full h-48 object-cover mb-4" src="https://storage.googleapis.com/a1aa/image/seYcKjF8wP_Wk6O1puBWMiqbQI2rmvp166DUnlAtO8g.jpg" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Commercial Building
+                        </h3>
                         <p class="text-gray-700 mb-4">
                             A state-of-the-art commercial building designed and managed by our expert team.
                         </p>
-                        <div id="map1" class="map-container"></div>
                     </div>
                 </div>
-
                 <!-- Residential Complex -->
                 <div class="w-full md:w-1/3 p-4 card">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="A luxury residential complex" class="w-full h-48 object-cover mb-4"
-                            src="https://storage.googleapis.com/a1aa/image/fV8LLHNOLa443yshurbQ0Zy-uUJeUW_YsVfNbFbJ5zY.jpg" />
-                        <h3 class="text-xl font-bold mb-2">Residential Complex</h3>
+                        <img alt="A luxury residential complex" class="w-full h-48 object-cover mb-4" src="https://storage.googleapis.com/a1aa/image/fV8LLHNOLa443yshurbQ0Zy-uUJeUW_YsVfNbFbJ5zY.jpg" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Residential Complex
+                        </h3>
                         <p class="text-gray-700 mb-4">
                             A luxury residential complex featuring modern amenities and sustainable design.
                         </p>
-                        <div id="map2" class="map-container"></div>
                     </div>
                 </div>
-
                 <!-- Industrial Facility -->
                 <div class="w-full md:w-1/3 p-4 card">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="An industrial facility with machinery" class="w-full h-48 object-cover mb-4"
-                            src="https://storage.googleapis.com/a1aa/image/BRMUZitZ8CbAo1ZZYxgEj4kBzBMkBLsMyNtW5sEl5Z8.jpg" />
-                        <h3 class="text-xl font-bold mb-2">Industrial Facility</h3>
+                        <img alt="An industrial facility with machinery" class="w-full h-48 object-cover mb-4" src="https://storage.googleapis.com/a1aa/image/BRMUZitZ8CbAo1ZZYxgEj4kBzBMkBLsMyNtW5sEl5Z8.jpg" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Industrial Facility
+                        </h3>
                         <p class="text-gray-700 mb-4">
                             A high-tech industrial facility built to meet the needs of modern manufacturing.
                         </p>
-                        <div id="map3" class="map-container"></div>
+                    </div>
+                </div>
+                <!-- Office Building -->
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="A modern office building" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/i-_V8lIUBcHc_esQyLRv1GnYgjIcgX5MSU4xfONih3w.jpg" width="600" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Office Building
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            A modern office building equipped with the latest technology and amenities.
+                        </p>
+                    </div>
+                </div>
+                <!-- Shopping Mall -->
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="A large shopping mall" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/fGX5baB8NlBwH-4e-QmwVwbf5AdXUi-gerg4uhYM5R0.jpg" width="600" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Shopping Mall
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            A large shopping mall featuring a variety of stores and entertainment options.
+                        </p>
+                    </div>
+                </div>
+                <!-- Hospital -->
+                <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="A modern hospital building" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/__YoXUDSrp4MeARDysUEoln0CtH8FPGZyCd-JMbG7BM.jpg" width="600" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Hospital
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            A modern hospital equipped with state-of-the-art medical facilities.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -165,7 +201,7 @@
         </div>
     </footer>
 
-    <script>
+    <!-- <script>
         function initMap(mapId, lat, lng) {
             var map = L.map(mapId).setView([lat, lng], 15);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -179,7 +215,57 @@
             initMap("map2", -6.9214, 107.6079);
             initMap("map3", -6.9308, 107.6186);
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
+
+
+
+
+
+<!-- <section class="py-12 bg-gray-100 fade-in">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold mb-6">Our Projects</h2>
+            <div class="flex flex-wrap justify-center">
+                <!-- Commercial Building -->
+<!-- <div class="w-full md:w-1/3 p-4 card"> -->
+<!-- <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="A modern commercial building" class="w-full h-48 object-cover mb-4"
+                            src="https://storage.googleapis.com/a1aa/image/seYcKjF8wP_Wk6O1puBWMiqbQI2rmvp166DUnlAtO8g.jpg" />
+                        <h3 class="text-xl font-bold mb-2">Commercial Building</h3>
+                        <p class="text-gray-700 mb-4">
+                            A state-of-the-art commercial building designed and managed by our expert team.
+                        </p> -->
+<!-- <div id="map1" class="map-container"></div> -->
+<!-- </div>
+                </div> --> -->
+
+<!-- Residential Complex -->
+<!-- <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="A luxury residential complex" class="w-full h-48 object-cover mb-4"
+                            src="https://storage.googleapis.com/a1aa/image/fV8LLHNOLa443yshurbQ0Zy-uUJeUW_YsVfNbFbJ5zY.jpg" />
+                        <h3 class="text-xl font-bold mb-2">Residential Complex</h3>
+                        <p class="text-gray-700 mb-4">
+                            A luxury residential complex featuring modern amenities and sustainable design.
+                        </p>
+                        <!-- <div id="map2" class="map-container"></div> -->
+<!-- </div>
+                </div> --> -->
+
+<!-- Industrial Facility -->
+<!-- <div class="w-full md:w-1/3 p-4 card">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="An industrial facility with machinery" class="w-full h-48 object-cover mb-4"
+                            src="https://storage.googleapis.com/a1aa/image/BRMUZitZ8CbAo1ZZYxgEj4kBzBMkBLsMyNtW5sEl5Z8.jpg" />
+                        <h3 class="text-xl font-bold mb-2">Industrial Facility</h3>
+                        <p class="text-gray-700 mb-4">
+                            A high-tech industrial facility built to meet the needs of modern manufacturing.
+                        </p>
+                        <!-- <div id="map3" class="map-container"></div> -->
+<!-- </div>
+                </div>
+            </div>
+        </div>
+    </section> --> -->
