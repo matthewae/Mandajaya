@@ -53,7 +53,7 @@
     <nav class="bg-gray-800 p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <img alt="Company logo" class="h-8 w-8 mr-2" height="32" src="https://storage.googleapis.com/a1aa/image/C1g_RHgcRjwfESr4HEnNiFuRTlolgrBoNTqasNcchfI.jpg" width="32" />
+                <img alt="Company logo" class="h-8 w-8 mr-2" height="40" src="{{ asset('storage/logo 2-modified.png') }}" width="40" />
                 <a class="text-white text-2xl font-bold" href="#">
                     Mandajaya Rekayasa Konstruksi
                 </a>
