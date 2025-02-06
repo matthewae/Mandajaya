@@ -55,7 +55,7 @@
                 <li><a class="text-gray-300 hover:text-white" href="service">Services</a></li>
                 <li><a class="text-gray-300 hover:text-white" href="project">Projects</a></li>
                 <li><a class="text-gray-300 hover:text-white" href="team">Our Team</a></li>
-                <li><a class="text-gray-300 hover:text-white" href="client">Our Clients</a></li>
+                <li><a class="text-gray-300 hover:text-white" href="client">Clients</a></li>
             </ul>
         </div>
     </nav>
