@@ -41,23 +41,51 @@
 
 <body class="font-roboto">
     <!-- Navbar -->
-    <nav class="bg-gray-800 p-4">
+    <nav class="bg-gray-900 p-4 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <img alt="Company logo" class="h-8 w-8 mr-2" height="40"
-                    src="{{ asset('storage/logo 2-modified.png') }}"
-                    width="40" />
-                <a class="text-white text-2xl font-bold" href="#">Mandajaya Rekayasa Konstruksi</a>
+            <div class="flex items-center space-x-3">
+                <img alt="Company logo" class="h-10 w-10" src="{{ asset('storage/Logo FI.png') }}" />
+                <a class="text-white text-2xl font-bold tracking-wide hover:text-blue-400 transition duration-300" href="/">
+                    Mandajaya Rekayasa Konstruksi
+                </a>
             </div>
-            <ul class="hidden md:flex space-x-4">
-                <li><a class="text-gray-300 hover:text-white" href="/">Home</a></li>
-                <li><a class="text-gray-300 hover:text-white" href="contact">Contact Us</a></li>
-                <li><a class="text-gray-300 hover:text-white" href="service">Services</a></li>
-                <li><a class="text-gray-300 hover:text-white" href="project">Projects</a></li>
-                <li><a class="text-gray-300 hover:text-white" href="team">Our Team</a></li>
-                <li><a class="text-gray-300 hover:text-white" href="client">Clients</a></li>
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="/">Home</a></li>
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="service">Services</a></li>
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="project">Projects</a></li>
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="team">Our Team</a></li>
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="client">Clients</a></li>
+                <!-- Company Profile Button -->
+                <li>
+                    <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing" target="_blank" class="border border-blue-500 text-blue-500 px-5 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300 flex items-center">
+                        Company Profile
+                    </a>
+                </li>
             </ul>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-300 focus:outline-none text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-3 mt-4 bg-gray-800 p-4 rounded-lg shadow-lg">
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="/">Home</a></li>
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="service">Services</a></li>
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="project">Projects</a></li>
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="team">Our Team</a></li>
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="client">Clients</a></li>
+            <!-- Company Profile Button for Mobile -->
+            <li>
+                <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing" target="_blank" class="border border-blue-500 text-blue-500 px-5 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300 text-center">
+                    Company Profile
+                </a>
+            </li>
+        </ul>
     </nav>
 
     <!-- Projects Section -->
@@ -111,7 +139,7 @@
     <footer class="bg-gray-800 py-6">
         <div class="container mx-auto text-center text-gray-300 px-4">
             <p>
-                © 2023 Mandajaya Rekayasa Konstruksi. All rights reserved.
+                © 2022 Mandajaya Rekayasa Konstruksi. All rights reserved.
             </p>
             <p class="mt-2">
                 Jl.Kota Mas 1 no.18 - Kota Cimahi - Jawa Barat - 40511

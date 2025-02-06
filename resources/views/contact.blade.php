@@ -14,82 +14,48 @@
 
 <body class="font-roboto">
 
-    <nav class="bg-gray-800 p-4">
+    <nav class="bg-gray-900 p-4 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <img alt="Company logo" class="h-8 w-8 mr-2" height="40" src="{{ asset('storage/logo 2-modified.png') }}" width="40" />
-                <a class="text-white text-2xl font-bold" href="#">
+            <div class="flex items-center space-x-3">
+                <img alt="Company logo" class="h-10 w-10" src="{{ asset('storage/Logo FI.png') }}" />
+                <a class="text-white text-2xl font-bold tracking-wide hover:text-blue-400 transition duration-300" href="/">
                     Mandajaya Rekayasa Konstruksi
                 </a>
             </div>
-            <ul class="hidden md:flex space-x-4">
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="/">Home</a></li>
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="service">Services</a></li>
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="project">Projects</a></li>
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="team">Our Team</a></li>
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="client">Clients</a></li>
+                <!-- Company Profile Button -->
                 <li>
-                    <a class="text-gray-300 hover:text-white" href="#">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a class="text-gray-300 hover:text-white" href="contact">
-                        Contact Us
-                    </a>
-                </li>
-                <li>
-                    <a class="text-gray-300 hover:text-white" href="service">
-                        Services
-                    </a>
-                </li>
-                <li>
-                    <a class="text-gray-300 hover:text-white" href="project">
-                        Projects
-                    </a>
-                </li>
-                <li>
-                    <a class="text-gray-300 hover:text-white" href="team">
-                        Our Team
-                    </a>
-                </li>
-                <li>
-                    <a class="text-gray-300 hover:text-white" href="client">
-                        Clients
+                    <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing" target="_blank" class="border border-blue-500 text-blue-500 px-5 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300 flex items-center">
+                        Company Profile
                     </a>
                 </li>
             </ul>
+            <!-- Mobile Menu Button -->
             <div class="md:hidden">
-                <button id="menu-toggle" class="text-gray-300 focus:outline-none">
-                    <i class="fas fa-bars">
-                    </i>
+                <button id="menu-toggle" class="text-gray-300 focus:outline-none text-2xl">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
-        <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 mt-4">
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-3 mt-4 bg-gray-800 p-4 rounded-lg shadow-lg">
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="/">Home</a></li>
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="service">Services</a></li>
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="project">Projects</a></li>
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="team">Our Team</a></li>
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="client">Clients</a></li>
+            <!-- Company Profile Button for Mobile -->
             <li>
-                <a class="text-gray-300 hover:text-white" href="#">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a class="text-gray-300 hover:text-white" href="contact">
-                    Contact Us
-                </a>
-            </li>
-            <li>
-                <a class="text-gray-300 hover:text-white" href="service">
-                    Services
-                </a>
-            </li>
-            <li>
-                <a class="text-gray-300 hover:text-white" href="project">
-                    Projects
-                </a>
-            </li>
-            <li>
-                <a class="text-gray-300 hover:text-white" href="team">
-                    Our Team
-                </a>
-            </li>
-            <li>
-                <a class="text-gray-300 hover:text-white" href="client">
-                    Clients
+                <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing" target="_blank" class="border border-blue-500 text-blue-500 px-5 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300 text-center">
+                    Company Profile
                 </a>
             </li>
         </ul>
@@ -106,24 +72,24 @@
             <div class="flex flex-wrap justify-center">
                 <div class="w-full md:w-1/2 p-4">
                     <form id="contact-form" class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="mb-4">
+                        <div class="mb-4">
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
-                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
-                                   id="name" type="text" name="name" placeholder="Your Name" required />
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="name" type="text" name="name" placeholder="Your Name" required />
                         </div>
                         <div class="mb-4">
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
-                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
-                                   id="email" type="email" name="email" placeholder="Your Email" required />
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="email" type="email" name="email" placeholder="Your Email" required />
                         </div>
                         <div class="mb-4">
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
-                            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
-                                      id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                         </div>
                         <div class="flex items-center justify-between">
                             <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                            type="submit">Send Message
+                                type="submit">Send Message
                             </button>
                         </div>
                     </form>
@@ -134,47 +100,62 @@
 
     <footer class="bg-gray-800 py-6">
         <div class="container mx-auto text-center text-gray-300 px-4">
-            <p>© 2023 Mandajaya Rekayasa Konstruksi. All rights reserved.</p>
+            <p>© 2022 Mandajaya Rekayasa Konstruksi. All rights reserved.</p>
             <p class="mt-2">Jl.Kota Mas 1 no.18 - Kota Cimahi - Jawa Barat - 40511</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a class="text-gray-300 hover:text-white" href="https://www.facebook.com/profile.php?id=61569553317515">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="text-gray-300 hover:text-white" href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="text-gray-300 hover:text-white" href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="text-gray-300 hover:text-white" href="https://www.instagram.com/mandajaya_rekayasa_konstruksi?igsh=MW1kdTFxb2kycWNheg==">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-           document.getElementById('contact-form').addEventListener('submit', function(event) {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
             let formData = new FormData(this);
 
             fetch("{{ route('contact.store') }}", {
-                method: "POST",
-                body: formData,
-                headers: {
-                    "X-CSRF-TOKEN": document.querySelector('meta[name=\"csrf-token\"]').getAttribute("content")
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                swal.fire ({
-                    title : "Success!",
-                    text : "Your message has been sent successfully.",
-                    icon : "success",
-                    confirmButtonText : "Ok"
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        "X-CSRF-TOKEN": document.querySelector('meta[name=\"csrf-token\"]').getAttribute("content")
+                    }
                 })
-                document.getElementById('contact-form').reset();
-            })
-            .catch(error => {
-                swal.fire({
-                    title : "Error!",
-                    text : "There was a problem sending message. Please try again later.",
-                    icon : "error",
-                    confirmButtonText : "OK"
+                .then(response => response.json())
+                .then(data => {
+                    swal.fire({
+                        title: "Success!",
+                        text: "Your message has been sent successfully.",
+                        icon: "success",
+                        confirmButtonText: "Ok"
+                    })
+                    document.getElementById('contact-form').reset();
+                })
+                .catch(error => {
+                    swal.fire({
+                        title: "Error!",
+                        text: "There was a problem sending message. Please try again later.",
+                        icon: "error",
+                        confirmButtonText: "OK"
+                    });
+                    console.error("Error:", error);
                 });
-                console.error("Error:",error);
-            });
         });
     </script>
-    
+
 </body>
+
 </html>
