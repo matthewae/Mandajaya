@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,16 +11,15 @@
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
-    <meta content="{{ csrf_token() }}" name="csrf-token">
+    <meta content="{{ csrf_token() }}" name="csrf-token" />
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet" />
-    </meta>
 </head>
 
 <body class="font-roboto">
     <nav class="bg-gray-900 p-4 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <img alt="Company logo" class="h-10 w-10" src="{{ asset('storage/Logo FI.png') }}" />
+                <img alt="Company logo" class="h-10 w-10" height="40" src="https://storage.googleapis.com/a1aa/image/Zm3UrJBuTOcRBcx4__U5UemxPt3gdEJkSAZmqf2A-hc.jpg" width="40" />
                 <a class="text-white text-2xl font-bold tracking-wide hover:text-blue-400 transition duration-300" href="/">
                     Mandajaya Rekayasa Konstruksi
                 </a>
@@ -113,38 +113,63 @@
     </nav>
     <section class="py-12 bg-gray-100">
         <div class="container mx-auto text-center px-4">
-            <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-            <p class="text-gray-700 mb-6">We would love to hear from you! Please fill out the form below to get in touch with us.</p>
+            <h2 class="text-3xl font-bold mb-6">
+                Contact Us
+            </h2>
+            <p class="text-gray-700 mb-6">
+                We would love to hear from you! Please fill out the form below to get in touch with us.
+            </p>
             <div class="flex flex-wrap justify-center">
                 <div class="w-full md:w-1/2 p-4">
-                    <form class="bg-white p-6 rounded-lg shadow-lg" id="contact-form">
+                    <form class="bg-white p-6 rounded-lg shadow-lg h-full" id="contact-form">
                         <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
-                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="name" placeholder="Your Name" required type="text" />
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                                Name
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="name" placeholder="Your Name" required="" type="text" />
                         </div>
                         <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Phone</label>
-                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" name="phone" placeholder="Your Phone Number" required type="tel" />
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+                                Phone
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" name="phone" placeholder="Your Phone Number" required="" type="tel" />
                         </div>
                         <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
-                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" placeholder="Your Email" required type="email" />
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                                Email
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" placeholder="Your Email" required="" type="email" />
                         </div>
                         <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="subject">Subject</label>
-                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="subject" name="subject" placeholder="Subject" required type="text" />
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="subject">
+                                Subject
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="subject" name="subject" placeholder="Subject" required="" type="text" />
                         </div>
                         <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
-                            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" name="message" placeholder="Your Message" required rows="5"></textarea>
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+                                Message
+                            </label>
+                            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" name="message" placeholder="Your Message" required="" rows="5"></textarea>
                         </div>
                         <div class="flex items-center justify-between">
-                            <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="sendEmail()">Send Message</button>
+                            <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="sendEmail()" type="button">
+                                Send Message
+                            </button>
                         </div>
                     </form>
                 </div>
                 <div class="w-full md:w-1/2 p-4 flex justify-center items-center">
-                    <iframe class="w-full h-96 border-0 rounded-lg shadow-lg" src="https://www.google.com/maps?q=-6.866557,107.539226&hl=es;z=14&output=embed"></iframe>
+                    <div class="bg-white p-6 rounded-lg shadow-lg w-full h-full flex flex-col">
+                        <h3 class="text-2xl font-bold mb-4">
+                            Our Location
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            Jl.Kota Mas 1 no.18 - Kota Cimahi - Jawa Barat - 40511
+                        </p>
+                        <iframe class="w-full flex-grow border-0 rounded-lg shadow-lg" src="https://www.google.com/maps?q=-6.866557,107.539226&amp;hl=es;z=14&amp;output=embed">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,23 +208,27 @@
         function sendEmail() {
             let name = document.getElementById("name").value;
             let email = document.getElementById("email").value;
-            let phone = document.getElementById("phone").value; // Get phone number
+            let phone = document.getElementById("phone").value;
             let subject = document.getElementById("subject").value;
             let message = document.getElementById("message").value;
 
             let mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=contact.us@mandajayarekayasakonstruksi.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-        'Name: ' + name +
-        '\nEmail: ' + email +
-        '\nPhone: ' + phone + // Add phone number here
-        '\n\n' + message
-    )}`;
+                'Name: ' + name +
+                '\nEmail: ' + email +
+                '\nPhone: ' + phone +
+                '\n\n' + message
+            )}`;
 
             window.open(mailtoLink, '_blank');
         }
 
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            const mobileMenu = document.getElementById("mobile-menu");
+            mobileMenu.classList.toggle("hidden");
+        });
 
         document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Mencegah reload halaman
+            event.preventDefault();
 
             let formData = new FormData(this);
 
@@ -210,7 +239,6 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.status === "success") {
-                        // Tampilkan SweetAlert untuk sukses
                         Swal.fire({
                             icon: "success",
                             title: "Success!",
@@ -218,10 +246,8 @@
                             confirmButtonColor: "#3085d6"
                         });
 
-                        // Kosongkan input field setelah sukses
                         document.getElementById("contact-form").reset();
                     } else {
-                        // Tampilkan SweetAlert untuk error
                         Swal.fire({
                             icon: "error",
                             title: "Oops...",
@@ -232,7 +258,6 @@
                 })
                 .catch(error => {
                     console.error("Error:", error);
-                    // Tampilkan SweetAlert untuk error koneksi
                     Swal.fire({
                         icon: "error",
                         title: "Oops...",
@@ -242,7 +267,6 @@
                 });
         });
     </script>
-
 </body>
 
 </html>

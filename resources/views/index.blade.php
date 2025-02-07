@@ -45,6 +45,13 @@
             transform: translateY(-10px);
             transition: transform 0.3s ease-in-out;
         }
+
+        .service-icon:hover {
+            color: #f59e0b;
+            /* Tailwind's yellow-500 */
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
     </style>
 </head>
 
@@ -132,6 +139,20 @@
             <h2 class="text-3xl font-bold mb-6">
                 About Us
             </h2>
+            <p class="text-gray-700 mb-6 text-justify">
+                PT. Mandajaya Rekayasa Konstruksi (MRK) was founded in 2022 with a vision of providing top-notch construction
+                consulting services. Over the years, we have grown into a leading firm in the industry, known for our commitment
+                to quality, innovation, and client satisfaction. Our expertise spans various sectors, including infrastructure,
+                commercial, and residential projects, allowing us to offer comprehensive solutions tailored to each client’s unique needs.
+            </p>
+            <p class="text-gray-700 mb-6 text-justify">
+                Our team of experienced professionals brings together technical excellence, industry insights, and a client-focused
+                approach to ensure that every project is executed with precision and efficiency. We leverage the latest technologies and
+                best practices in construction management, ensuring sustainable and cost-effective outcomes. At MRK, we believe in building
+                long-term relationships with our clients, partners, and stakeholders by consistently delivering projects that exceed expectations.
+                Through continuous improvement and dedication to excellence, we strive to shape the future of the construction industry
+                and contribute to the development of a better-built environment.
+            </p>
             <div class="flex flex-wrap justify-center">
                 <a class="w-full md:w-1/3 p-4 card" href="team">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -176,59 +197,73 @@
                 Our Services
             </h2>
             <div class="flex flex-wrap justify-center">
-                <div class="w-full md:w-1/4 p-4">
-                    <a href="service" class="block">
-                        <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
-                            <i class="fas fa-hard-hat text-4xl text-yellow-500 mb-4">
-                            </i>
-                            <h3 class="text-xl font-bold mb-2">
+                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
+                    <a href="service" class="block service-icon">
+                        <div class="p-6 rounded-lg">
+                            <i class="fas fa-hard-hat text-6xl text-gray-700 mb-4"></i>
+                            <h3 class="text-xl font-bold">
                                 Project Management
                             </h3>
-                            <p class="text-gray-700">
-                                Comprehensive project management services to ensure your project is completed on time and within budget.
-                            </p>
                         </div>
                     </a>
                 </div>
-                <div class="w-full md:w-1/4 p-4">
-                    <a href="service" class="block">
-                        <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
-                            <i class="fas fa-drafting-compass text-4xl text-yellow-500 mb-4">
-                            </i>
-                            <h3 class="text-xl font-bold mb-2">
+                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
+                    <a href="service" class="block service-icon">
+                        <div class="p-6 rounded-lg">
+                            <i class="fas fa-drafting-compass text-6xl text-gray-700 mb-4"></i>
+                            <h3 class="text-xl font-bold">
                                 Design Consultation
                             </h3>
-                            <p class="text-gray-700">
-                                Expert design consultation to help you create functional and aesthetically pleasing spaces.
-                            </p>
                         </div>
                     </a>
                 </div>
-                <div class="w-full md:w-1/4 p-4">
-                    <a href="service" class="block">
-                        <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
-                            <i class="fas fa-tools text-4xl text-yellow-500 mb-4">
-                            </i>
-                            <h3 class="text-xl font-bold mb-2">
+                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
+                    <a href="service" class="block service-icon">
+                        <div class="p-6 rounded-lg">
+                            <i class="fas fa-tools text-6xl text-gray-700 mb-4"></i>
+                            <h3 class="text-xl font-bold">
                                 Construction Supervision
                             </h3>
-                            <p class="text-gray-700">
-                                Professional supervision to ensure that all construction activities are carried out to the highest standards.
-                            </p>
                         </div>
                     </a>
                 </div>
-                <div class="w-full md:w-1/4 p-4">
-                    <a href="service" class="block">
-                        <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
-                            <i class="fas fa-building text-4xl text-yellow-500 mb-4">
-                            </i>
-                            <h3 class="text-xl font-bold mb-2">
+                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
+                    <a href="service" class="block service-icon">
+                        <div class="p-6 rounded-lg">
+                            <i class="fas fa-building text-6xl text-gray-700 mb-4"></i>
+                            <h3 class="text-xl font-bold">
                                 Quality Assurance
                             </h3>
-                            <p class="text-gray-700">
-                                Rigorous quality assurance processes to ensure the durability and safety of your construction projects.
-                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
+                    <a href="service" class="block service-icon">
+                        <div class="p-6 rounded-lg">
+                            <i class="fas fa-chart-line text-6xl text-gray-700 mb-4"></i>
+                            <h3 class="text-xl font-bold">
+                                Cost Estimation
+                            </h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
+                    <a href="service" class="block service-icon">
+                        <div class="p-6 rounded-lg">
+                            <i class="fas fa-file-contract text-6xl text-gray-700 mb-4"></i>
+                            <h3 class="text-xl font-bold">
+                                Contract Administration
+                            </h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
+                    <a href="service" class="block service-icon">
+                        <div class="p-6 rounded-lg">
+                            <i class="fas fa-recycle text-6xl text-gray-700 mb-4"></i>
+                            <h3 class="text-xl font-bold">
+                                Sustainability Consulting
+                            </h3>
                         </div>
                     </a>
                 </div>
@@ -242,33 +277,39 @@
                 Our Projects
             </h2>
             <div class="flex flex-wrap justify-center">
-                <div class="w-full md:w-1/3 p-4">
-                    <img alt="A modern commercial building" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/seYcKjF8wP_Wk6O1puBWMiqbQI2rmvp166DUnlAtO8g.jpg" width="300" />
-                    <h3 class="text-xl font-bold mb-2">
-                        Commercial Building
-                    </h3>
-                    <p class="text-gray-700">
-                        A state-of-the-art commercial building designed and managed by our expert team.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/3 p-4">
-                    <img alt="A luxury residential complex" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/fV8LLHNOLa443yshurbQ0Zy-uUJeUW_YsVfNbFbJ5zY.jpg" width="300" />
-                    <h3 class="text-xl font-bold mb-2">
-                        Residential Complex
-                    </h3>
-                    <p class="text-gray-700">
-                        A luxury residential complex featuring modern amenities and sustainable design.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/3 p-4">
-                    <img alt="An industrial facility with machinery" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/BRMUZitZ8CbAo1ZZYxgEj4kBzBMkBLsMyNtW5sEl5Z8.jpg" width="300" />
-                    <h3 class="text-xl font-bold mb-2">
-                        Industrial Facility
-                    </h3>
-                    <p class="text-gray-700">
-                        A high-tech industrial facility built to meet the needs of modern manufacturing.
-                    </p>
-                </div>
+                <a class="w-full md:w-1/3 p-4 card" href="project">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="A modern commercial building" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/seYcKjF8wP_Wk6O1puBWMiqbQI2rmvp166DUnlAtO8g.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Commercial Building
+                        </h3>
+                        <p class="text-gray-700">
+                            A state-of-the-art commercial building designed and managed by our expert team.
+                        </p>
+                    </div>
+                </a>
+                <a class="w-full md:w-1/3 p-4 card" href="project">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="A luxury residential complex" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/fV8LLHNOLa443yshurbQ0Zy-uUJeUW_YsVfNbFbJ5zY.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Residential Complex
+                        </h3>
+                        <p class="text-gray-700">
+                            A luxury residential complex featuring modern amenities and sustainable design.
+                        </p>
+                    </div>
+                </a>
+                <a class="w-full md:w-1/3 p-4 card" href="project">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img alt="An industrial facility with machinery" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/BRMUZitZ8CbAo1ZZYxgEj4kBzBMkBLsMyNtW5sEl5Z8.jpg" width="300" />
+                        <h3 class="text-xl font-bold mb-2">
+                            Industrial Facility
+                        </h3>
+                        <p class="text-gray-700">
+                            A high-tech industrial facility built to meet the needs of modern manufacturing.
+                        </p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -311,33 +352,30 @@
     </section>
     <!-- Footer -->
     <footer class="bg-gray-800 py-6">
-        <div class="container mx-auto text-center text-gray-300 px-4">
-            <p>
+        <div class="container mx-auto text-center text-gray-300 px-6">
+            <p class="text-sm md:text-base">
                 © 2022 Mandajaya Rekayasa Konstruksi. All rights reserved.
             </p>
-            <p class="mt-2">
-                Jl.Kota Mas 1 no.18 - Kota Cimahi - Jawa Barat - 40511
+            <p class="mt-2 text-sm md:text-base leading-tight">
+                Jl. Kota Mas 1 No.18, Kota Cimahi, Jawa Barat, 40511
             </p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a class="text-gray-300 hover:text-white" href="https://www.facebook.com/profile.php?id=61569553317515">
-                    <i class="fab fa-facebook-f">
-                    </i>
+            <div class="flex justify-center gap-3 mt-4 flex-wrap">
+                <a class="text-gray-300 hover:text-white text-lg" href="https://www.facebook.com/profile.php?id=61569553317515">
+                    <i class="fab fa-facebook-f"></i>
                 </a>
-                <a class="text-gray-300 hover:text-white" href="#">
-                    <i class="fab fa-twitter">
-                    </i>
+                <a class="text-gray-300 hover:text-white text-lg" href="#">
+                    <i class="fab fa-twitter"></i>
                 </a>
-                <a class="text-gray-300 hover:text-white" href="#">
-                    <i class="fab fa-linkedin-in">
-                    </i>
+                <a class="text-gray-300 hover:text-white text-lg" href="#">
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a class="text-gray-300 hover:text-white" href="https://www.instagram.com/mandajaya_rekayasa_konstruksi?igsh=MW1kdTFxb2kycWNheg==">
-                    <i class="fab fa-instagram">
-                    </i>
+                <a class="text-gray-300 hover:text-white text-lg" href="https://www.instagram.com/mandajaya_rekayasa_konstruksi?igsh=MW1kdTFxb2kycWNheg==">
+                    <i class="fab fa-instagram"></i>
                 </a>
             </div>
         </div>
     </footer>
+
     <script>
         let currentSlide = 0;
 
@@ -371,6 +409,11 @@
             } else {
                 mobileMenu.classList.add('hidden');
             }
+
+        document.getElementById("menu-toggle").addEventListener("click",function() {
+            var menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+        });
         });
     </script>
 </body>
