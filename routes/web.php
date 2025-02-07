@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,8 +25,19 @@ Route::group(['prefix' => '/'], function () {
     Route::get('service', [HomeController::class, 'service'])->name('service');
     Route::get('contact', [HomeController::class, 'contact'])->name('contact');
     Route::get('vision', [HomeController::class, 'vision'])->name('vision');
-
 });
 
 // Contact Form Route
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+// Route::post('/send-email', function (Request $request) {
+//     $request->validate([
+//         'name' => 'required',
+//         'email' => 'required|email',
+//         'message' => 'required',
+//     ]);
+
+//     Mail::to("contact.us@mandajayarekayasakonstruksi.com")->send(new ContactMail($request->all()));
+
+//     return response()->json(["success" => "Email sent successfully!"]);
+// });

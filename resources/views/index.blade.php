@@ -284,27 +284,27 @@
             <div class="flex flex-wrap justify-center">
                 <div class="w-full md:w-1/4 p-4">
                     <img alt="Logo of Client 1" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/BNI.png') }}" width="200" />
-                    <h3 class="text-xl font-bold mb-2">
+                    <!-- <h3 class="text-xl font-bold mb-2">
                         Client 1
-                    </h3>
+                    </h3> -->
                 </div>
                 <div class="w-full md:w-1/4 p-4">
                     <img alt="Logo of Client 2" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/KAI.jpg') }}" width="200" />
-                    <h3 class="text-xl font-bold mb-2">
+                    <!-- <h3 class="text-xl font-bold mb-2">
                         Client 2
-                    </h3>
+                    </h3> -->
                 </div>
                 <div class="w-full md:w-1/4 p-4">
                     <img alt="Logo of Client 3" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/BI.png') }}" width="200" />
-                    <h3 class="text-xl font-bold mb-2">
+                    <!-- <h3 class="text-xl font-bold mb-2">
                         Client 3
-                    </h3>
+                    </h3> -->
                 </div>
                 <div class="w-full md:w-1/4 p-4">
                     <img alt="Logo of Client 4" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/POS.png') }}" width="200" />
-                    <h3 class="text-xl font-bold mb-2">
+                    <!-- <h3 class="text-xl font-bold mb-2">
                         Client 4
-                    </h3>
+                    </h3> -->
                 </div>
             </div>
         </div>
