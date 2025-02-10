@@ -19,7 +19,7 @@
     <nav class="bg-gray-900 p-4 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <img alt="Company logo" class="h-10 w-10" height="40" src="https://storage.googleapis.com/a1aa/image/Zm3UrJBuTOcRBcx4__U5UemxPt3gdEJkSAZmqf2A-hc.jpg" width="40" />
+                <img alt="Company logo" class="h-10 w-10" height="40" src="{{ asset('storage/Logo FI.png') }}" width="40" />
                 <a class="text-white text-2xl font-bold tracking-wide hover:text-blue-400 transition duration-300" href="/">
                     Mandajaya Rekayasa Konstruksi
                 </a>
