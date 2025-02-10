@@ -167,13 +167,13 @@
                         <!-- Client 5 -->
                         <div class="w-full sm:w-1/2 md:w-1/4 p-4">
                             <div class="bg-white p-6 rounded-lg shadow-lg client-box">
-                                <img alt="Logo of Client 5" class="w-full h-24 object-contain mb-4" src="{{ asset('storage/esdm.png') }}" />
+                                <img alt="Logo of Client 5" class="w-full h-24 object-contain mb-4" src="{{ asset('storage/jakarta.png') }}" />
                             </div>
                         </div>
                         <!-- Client 6 -->
                         <div class="w-full sm:w-1/2 md:w-1/4 p-4">
                             <div class="bg-white p-6 rounded-lg shadow-lg client-box">
-                                <img alt="Logo of Client 6" class="w-full h-24 object-contain mb-4" src="{{ asset('storage/dpkp 3.png') }}" />
+                                <img alt="Logo of Client 6" class="w-full h-24 object-contain mb-4" src="{{ asset('storage/esdm.png') }}" />
                             </div>
                         </div>
                         <!-- Client 7 -->
@@ -236,7 +236,7 @@
                         <!-- Client 16 -->
                         <div class="w-full sm:w-1/2 md:w-1/4 p-4">
                             <div class="bg-white p-6 rounded-lg shadow-lg client-box">
-                                <img alt="Logo of Client 16" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/POS.png') }}" width="200" />
+                                <img alt="Logo of Client 16" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/dpkp 3.png') }}" width="200" />
                             </div>
                         </div>
                     </div>
@@ -347,7 +347,7 @@
             showSlide(currentIndex);
         }
 
-        setInterval(nextSlide, 7000);
+        setInterval(nextSlide, 5000);
     </script>
 </body>
 
