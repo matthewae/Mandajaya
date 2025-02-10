@@ -55,6 +55,16 @@
             .service-icon:hover i {
                 color: #f59e0b;
             }
+
+            .carousel-track {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .carousel-slide {
+                min-width: 100%;
+                box-sizing: border-box;
+            }
         </style>
     </head>
 
@@ -323,34 +333,172 @@
                     Our Clients
                 </h2>
                 <p class="text-gray-700 mb-6">
-                    We are proud to have worked with a diverse range of clients from various industries. Here are some of our esteemed clients:
+                    We are proud to have worked with a diverse range of clients from various industries.
                 </p>
-                <div class="flex flex-wrap justify-center">
-                    <div class="w-full md:w-1/4 p-4">
-                        <img alt="Logo of Client 1" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/BNI.png') }}" width="200" />
-                        <!-- <h3 class="text-xl font-bold mb-2">
-                            Client 1
-                        </h3> -->
-                    </div>
-                    <div class="w-full md:w-1/4 p-4">
-                        <img alt="Logo of Client 2" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/KAI.jpg') }}" width="200" />
-                        <!-- <h3 class="text-xl font-bold mb-2">
-                            Client 2
-                        </h3> -->
-                    </div>
-                    <div class="w-full md:w-1/4 p-4">
-                        <img alt="Logo of Client 3" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/BI.png') }}" width="200" />
-                        <!-- <h3 class="text-xl font-bold mb-2">
-                            Client 3
-                        </h3> -->
-                    </div>
-                    <div class="w-full md:w-1/4 p-4">
-                        <img alt="Logo of Client 4" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/POS.png') }}" width="200" />
-                        <!-- <h3 class="text-xl font-bold mb-2">
-                            Client 4
-                        </h3> -->
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide flex flex-wrap justify-center">
+                            <!-- Client 1 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 1" class="w-full h-24 object-contain mb-4" src="{{ asset('storage/bandung.png') }}" />
+                                </div>
+                            </div>
+                            <!-- Client 2 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 2" class="w-full h-24 object-contain mb-4" src="{{ asset('storage/Logo-cimahi.png') }}" />
+                                </div>
+                            </div>
+                            <!-- Client 3 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 3" class="w-full h-24 object-contain mb-4" src="{{ asset('storage/bogor.png') }}" />
+                                </div>
+                            </div>
+                            <!-- Client 4 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 4" class="w-full h-24 object-contain mb-4" src="{{ asset('storage/takalar.png') }}" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide flex flex-wrap justify-center">
+                            <!-- Client 5 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 5" class="w-full h-24 object-contain mb-4" src="{{ asset('storage/esdm.png') }}" />
+                                </div>
+                            </div>
+                            <!-- Client 6 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 6" class="w-full h-24 object-contain mb-4" src="{{ asset('storage/dpkp 3.png') }}" />
+                                </div>
+                            </div>
+                            <!-- Client 7 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 7" class="w-full h-24 object-contain mb-4" src="{{ asset('storage/BAP.png') }}" />
+                                </div>
+                            </div>
+                            <!-- Client 8 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 8" class="w-full h-24 object-contain mb-4" src="{{ asset('storage/pupr 2.png') }}" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide flex flex-wrap justify-center">
+                            <!-- Client 9 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 9" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/Bi.png') }}" width="200" />
+                                </div>
+                            </div>
+                            <!-- Client 10 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 10" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/BNI.png') }}" width="200" />
+                                </div>
+                            </div>
+                            <!-- Client 11 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 11" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/KAI.jpg') }}" width="200" />
+                                </div>
+                            </div>
+                            <!-- Client 12 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 12" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/POS.png') }}" width="200" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide flex flex-wrap justify-center">
+                            <!-- Client 13 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 13" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/bukit.png') }}" width="200" />
+                                </div>
+                            </div>
+                            <!-- Client 14 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 14" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/rskgm.png') }}" width="200" />
+                                </div>
+                            </div>
+                            <!-- Client 15 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 15" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/KimiaFarma.png') }}" width="200" />
+                                </div>
+                            </div>
+                            <!-- Client 16 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 16" class="w-full h-24 object-contain mb-4" height="100" src="{{ asset('storage/POS.png') }}" width="200" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide flex flex-wrap justify-center">
+                            <!-- Client 17 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 17" class="w-full h-24 object-contain mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/Tlbt6CyVRvFAPc-2LGPMmIQaWnM8T4oCmxj1zpc9YAs.jpg" width="200" />
+                                </div>
+                            </div>
+                            <!-- Client 18 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 18" class="w-full h-24 object-contain mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/S20oaOWT8s2eaTGzdgQmcHZGK8Pq-rJZ39N6lGDbPns.jpg" width="200" />
+                                </div>
+                            </div>
+                            <!-- Client 19 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 19" class="w-full h-24 object-contain mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/lg4LKe0I2G2i4tnO0TNoiiOOFPeMm8cGm-Rx6RIICVg.jpg" width="200" />
+                                </div>
+                            </div>
+                            <!-- Client 20 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 20" class="w-full h-24 object-contain mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/Trr55l8kxtQh_CxjmdKKSKfbvtjaKxIUyA7k9R6TkZE.jpg" width="200" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide flex flex-wrap justify-center">
+                            <!-- Client 21 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 21" class="w-full h-24 object-contain mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/o1HKmHV7sOv-DjDiJ1vseTQWAs9_TUr68TujvftgpDk.jpg" width="200" />
+                                </div>
+                            </div>
+                            <!-- Client 22 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 22" class="w-full h-24 object-contain mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/4aFC0Z4SbYNOTcKproTPHUe6fBMnoFLowsU2Xe6eEVM.jpg" width="200" />
+                                </div>
+                            </div>
+                            <!-- Client 23 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 23" class="w-full h-24 object-contain mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/f0TneKS1zb9hKsdu27_MMnXvtzcmePNZb6TnLxuiWls.jpg" width="200" />
+                                </div>
+                            </div>
+                            <!-- Client 24 -->
+                            <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+                                <div class="bg-white p-6 rounded-lg shadow-lg client-box">
+                                    <img alt="Logo of Client 24" class="w-full h-24 object-contain mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/WeSuQ5WdirZgN4mu1COHfQh9KSnIDRqPUjzg3kSfFRQ.jpg" width="200" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
         <!-- Footer -->
@@ -429,7 +577,25 @@
 
                 setInterval(changeImage, 4000);
 
+
             });
+
+
+            let currentIndex = 0;
+            const slides = document.querySelectorAll('.carousel-slide');
+            const totalSlides = slides.length;
+
+            function showSlide(index) {
+                const track = document.querySelector('.carousel-track');
+                track.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                showSlide(currentIndex);
+            }
+
+            setInterval(nextSlide, 7000);
         </script>
     </body>
 

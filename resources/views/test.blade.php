@@ -1,4 +1,4 @@
-<section class="py-12 bg-gray-100 fade-in">
+<!-- <section class="py-12 bg-gray-100 fade-in">
         <div class="container mx-auto text-center px-4">
             <h2 class="text-3xl font-bold mb-6">Our Goals</h2>
             <div class="flex flex-wrap justify-center">
@@ -52,4 +52,4 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
