@@ -56,11 +56,11 @@
             <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-6 items-center">
                 <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="/">Home</a></li>
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
                 <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="service">Services</a></li>
                 <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="project">Projects</a></li>
                 <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="team">Our Team</a></li>
                 <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="client">Clients</a></li>
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
                 <!-- Company Profile Button -->
                 <li>
                     <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing" target="_blank" class="border border-blue-500 text-blue-500 px-5 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300 flex items-center">
@@ -78,11 +78,11 @@
         <!-- Mobile Menu -->
         <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-3 mt-4 bg-gray-800 p-4 rounded-lg shadow-lg">
             <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="/">Home</a></li>
-            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
             <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="service">Services</a></li>
             <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="project">Projects</a></li>
             <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="team">Our Team</a></li>
             <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="client">Clients</a></li>
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
             <!-- Company Profile Button for Mobile -->
             <li>
                 <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing" target="_blank" class="border border-blue-500 text-blue-500 px-5 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300 text-center">
@@ -133,42 +133,42 @@
 
     <!-- Goals Section -->
     <section class="py-12 bg-gray-100 fade-in">
-    <div class="container mx-auto text-center px-4">
-        <h2 class="text-3xl font-bold mb-6">Our Goals</h2>
-        <div class="flex flex-wrap justify-center">
-            <!-- Card 1 -->
-            <div class="w-full md:w-1/3 p-4">
-                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
-                    <img alt="A construction site with cranes and building materials" class="w-full h-48 object-cover mb-4 rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/EAWT9lUVLNKce2OGyOHHsrRGiEiejxOjuwgG_JyTQ5c.jpg" width="600" />
-                    <h3 class="text-xl font-bold mb-2">Excellence in Quality</h3>
-                    <p class="text-gray-700">
-                        To be recognized as a leader in the construction consulting industry by consistently delivering projects that meet the highest standards of quality and safety.
-                    </p>
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold mb-6">Our Goals</h2>
+            <div class="flex flex-wrap justify-center">
+                <!-- Card 1 -->
+                <div class="w-full md:w-1/3 p-4">
+                    <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
+                        <img alt="A construction site with cranes and building materials" class="w-full h-48 object-cover mb-4 rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/EAWT9lUVLNKce2OGyOHHsrRGiEiejxOjuwgG_JyTQ5c.jpg" width="600" />
+                        <h3 class="text-xl font-bold mb-2">Excellence in Quality</h3>
+                        <p class="text-gray-700">
+                            To be recognized as a leader in the construction consulting industry by consistently delivering projects that meet the highest standards of quality and safety.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="w-full md:w-1/3 p-4">
-                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
-                    <img alt="A modern commercial building" class="w-full h-48 object-cover mb-4 rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/uekJHMxMi-fvYgdPHcXIDS0yZsiR0-xsgMt4yQ9clcE.jpg" width="600" />
-                    <h3 class="text-xl font-bold mb-2">Client Relationships</h3>
-                    <p class="text-gray-700">
-                        To foster long-term relationships with our clients by providing exceptional service and value, ensuring their satisfaction and loyalty.
-                    </p>
+                <!-- Card 2 -->
+                <div class="w-full md:w-1/3 p-4">
+                    <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
+                        <img alt="A modern commercial building" class="w-full h-48 object-cover mb-4 rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/uekJHMxMi-fvYgdPHcXIDS0yZsiR0-xsgMt4yQ9clcE.jpg" width="600" />
+                        <h3 class="text-xl font-bold mb-2">Client Relationships</h3>
+                        <p class="text-gray-700">
+                            To foster long-term relationships with our clients by providing exceptional service and value, ensuring their satisfaction and loyalty.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="w-full md:w-1/3 p-4">
-                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
-                    <img alt="A team of construction consultants in a meeting" class="w-full h-48 object-cover mb-4 rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/yKPd55IbXbVNc7FUUXwfVK4upPmoM9vmwTCfuBGMdRg.jpg" width="600" />
-                    <h3 class="text-xl font-bold mb-2">Innovation and Improvement</h3>
-                    <p class="text-gray-700">
-                        To continuously improve our processes and services through innovation, training, and the adoption of new technologies.
-                    </p>
+                <!-- Card 3 -->
+                <div class="w-full md:w-1/3 p-4">
+                    <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
+                        <img alt="A team of construction consultants in a meeting" class="w-full h-48 object-cover mb-4 rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/yKPd55IbXbVNc7FUUXwfVK4upPmoM9vmwTCfuBGMdRg.jpg" width="600" />
+                        <h3 class="text-xl font-bold mb-2">Innovation and Improvement</h3>
+                        <p class="text-gray-700">
+                            To continuously improve our processes and services through innovation, training, and the adoption of new technologies.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- Footer Section -->

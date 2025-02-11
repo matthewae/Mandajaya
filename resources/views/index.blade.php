@@ -12,8 +12,17 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
     <style>
+        /* Animations */
         .fade-in {
             animation: fadeIn 2s ease-in-out;
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .fade-up {
+            animation: fadeUp 0.5s ease-out;
         }
 
         @keyframes fadeIn {
@@ -26,6 +35,31 @@
             }
         }
 
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Carousel Styles */
         .carousel {
             position: relative;
             overflow: hidden;
@@ -41,21 +75,6 @@
             box-sizing: border-box;
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .service-icon:hover {
-            color: #f59e0b;
-            transform: scale(1.1);
-            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        .service-icon:hover i {
-            color: #f59e0b;
-        }
-
         .carousel-track {
             display: flex;
             transition: transform 0.5s ease-in-out;
@@ -64,6 +83,117 @@
         .carousel-slide {
             min-width: 100%;
             box-sizing: border-box;
+        }
+
+        /* Interactive Elements */
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .service-icon:hover {
+            transform: scale(1.1);
+            color: #f59e0b;
+        }
+
+        /* Navigation Dots */
+        .carousel-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: none;
+            padding: 0;
+        }
+
+        .dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        .dot:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Navigation Arrows */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-arrow:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel-arrow.prev {
+            left: 20px;
+        }
+
+        .carousel-arrow.next {
+            right: 20px;
+        }
+        .loading {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .loaded {
+            opacity: 1;
+        }
+
+        .carousel .carousel-dots .client-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            padding: 0;
+        }
+
+        .carousel .carousel-dots .client-dot.active {
+            background: rgba(0, 0, 0, 0.8);
+            transform: scale(1.2);
+        }
+
+        .carousel .carousel-dots .client-dot:hover {
+            background: rgba(0, 0, 0, 0.6);
         }
     </style>
 </head>
@@ -81,11 +211,11 @@
             <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-6 items-center">
                 <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="/">Home</a></li>
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
                 <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="service">Services</a></li>
                 <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="project">Projects</a></li>
                 <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="team">Our Team</a></li>
                 <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="client">Clients</a></li>
+                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
                 <!-- Company Profile Button -->
                 <li>
                     <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing" target="_blank" class="border border-blue-500 text-blue-500 px-5 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300 flex items-center">
@@ -103,11 +233,11 @@
         <!-- Mobile Menu -->
         <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-3 mt-4 bg-gray-800 p-4 rounded-lg shadow-lg">
             <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="/">Home</a></li>
-            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
             <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="service">Services</a></li>
             <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="project">Projects</a></li>
             <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="team">Our Team</a></li>
             <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="client">Clients</a></li>
+            <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
             <!-- Company Profile Button for Mobile -->
             <li>
                 <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing" target="_blank" class="border border-blue-500 text-blue-500 px-5 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300 text-center">
@@ -141,6 +271,18 @@
                 <p class="text-lg md:text-2xl mb-6">Expert construction consulting services for your projects</p>
             </div>
         </div>
+        <!-- Add Hero Carousel Navigation -->
+        <div class="carousel-dots">
+            <button class="dot active" onclick="showHeroSlide(0)" aria-label="Slide 1"></button>
+            <button class="dot" onclick="showHeroSlide(1)" aria-label="Slide 2"></button>
+            <button class="dot" onclick="showHeroSlide(2)" aria-label="Slide 3"></button>
+        </div>
+        <button class="carousel-arrow prev" onclick="prevHeroSlide()" aria-label="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-arrow next" onclick="nextHeroSlide()" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+        </button>
     </section>
     <!-- About Section -->
     <section class="py-12 bg-gray-100 fade-in">
@@ -493,7 +635,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="carousel-dots" style="position: relative; margin-top: 2rem;">
+                    <button class="dot client-dot active" onclick="showClientSlide(0)" aria-label="Client slide 1"></button>
+                    <button class="dot client-dot" onclick="showClientSlide(1)" aria-label="Client slide 2"></button>
+                    <button class="dot client-dot" onclick="showClientSlide(2)" aria-label="Client slide 3"></button>
+                    <button class="dot client-dot" onclick="showClientSlide(3)" aria-label="Client slide 4"></button>
+                    <button class="dot client-dot" onclick="showClientSlide(4)" aria-label="Client slide 5"></button>
+                    <button class="dot client-dot" onclick="showClientSlide(5)" aria-label="Client slide 6"></button>
+                </div>
+                <!-- <button class="carousel-arrow prev" onclick="prevClientSlide()" aria-label="Previous clients">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-arrow next" onclick="nextClientSlide()" aria-label="Next clients">
+                    <i class="fas fa-chevron-right"></i>
+                </button> -->
             </div>
+        </div>
+        </div>
         </div>
     </section>
 
@@ -526,18 +684,25 @@
     <script>
         // Hero Section Carousel
         let currentHeroSlide = 0;
+        const heroSlides = document.querySelectorAll('.carousel-item');
+        const heroDots = document.querySelectorAll('.hero-dot');
 
         function showHeroSlide(index) {
-            const slides = document.querySelectorAll('.carousel-item');
-            if (index >= slides.length) {
+            if (index >= heroSlides.length) {
                 currentHeroSlide = 0;
             } else if (index < 0) {
-                currentHeroSlide = slides.length - 1;
+                currentHeroSlide = heroSlides.length - 1;
             } else {
                 currentHeroSlide = index;
             }
+
             const offset = -currentHeroSlide * 100;
             document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+
+            // Update dots
+            heroDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentHeroSlide);
+            });
         }
 
         function nextHeroSlide() {
@@ -548,22 +713,27 @@
             showHeroSlide(currentHeroSlide - 1);
         }
 
-        setInterval(nextHeroSlide, 4000);
-
-        // Our Clients Section Carousel
+        // Client Section Carousel
         let currentClientSlide = 0;
+        const clientSlides = document.querySelectorAll('.carousel-slide');
+        const clientDots = document.querySelectorAll('.client-dot');
 
         function showClientSlide(index) {
-            const slides = document.querySelectorAll('.carousel-slide');
-            if (index >= slides.length) {
+            if (index >= clientSlides.length) {
                 currentClientSlide = 0;
             } else if (index < 0) {
-                currentClientSlide = slides.length - 1;
+                currentClientSlide = clientSlides.length - 1;
             } else {
                 currentClientSlide = index;
             }
+
             const offset = -currentClientSlide * 100;
             document.querySelector('.carousel-track').style.transform = `translateX(${offset}%)`;
+
+            // Update dots
+            document.querySelectorAll('.client-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentClientSlide);
+            });
         }
 
         function nextClientSlide() {
@@ -574,12 +744,35 @@
             showClientSlide(currentClientSlide - 1);
         }
 
-        setInterval(nextClientSlide, 5000);
 
-        // Mobile Menu Toggle
+
+        // Auto advance slides
+        setInterval(nextHeroSlide, 4000);
+        setInterval(() => {
+            currentClientSlide = (currentClientSlide + 1) % clientSlides.length;
+            showClientSlide(currentClientSlide);
+        }, 5000);
+
+        // Mobile Menu Toggle with animation
         document.getElementById('menu-toggle').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('slide-in');
+        });
+
+        // Loading animation
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>
