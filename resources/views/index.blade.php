@@ -401,7 +401,7 @@
     </section>
 
     <!-- Hero Section with Carousel -->
-    <!-- <section class="relative fade-in carousel">
+    <section class="relative fade-in carousel">
         <div class="carousel-inner">
             <div class="carousel-item">
                 <img alt="A construction site with cranes and building materials" class="w-full h-screen object-cover"
@@ -421,9 +421,9 @@
                 <h1 class="text-4xl md:text-6xl font-bold mb-4">Building the Future, Restoring the Past</h1>
                 <p class="text-lg md:text-2xl mb-6">Expert construction consulting services for your projects</p>
             </div>
-        </div> -->
+        </div>
     <!-- Add Hero Carousel Navigation -->
-    <!-- <div class="carousel-dots">
+    <div class="carousel-dots">
             <button class="dot active" onclick="showHeroSlide(0)" aria-label="Slide 1"></button>
             <button class="dot" onclick="showHeroSlide(1)" aria-label="Slide 2"></button>
             <button class="dot" onclick="showHeroSlide(2)" aria-label="Slide 3"></button>
@@ -434,7 +434,7 @@
         <button class="carousel-arrow next" onclick="nextHeroSlide()" aria-label="Next slide">
             <i class="fas fa-chevron-right"></i>
         </button>
-    </section> -->
+    </section>
 
     <!-- About Section -->
     <section class="py-16 bg-gray-100 fade-in">
