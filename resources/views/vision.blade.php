@@ -137,8 +137,238 @@
         </ul>
     </nav>
 
+    <!-- Vision Section -->
+    <section class="py-16 bg-gradient-to-b from-gray-100 to-white fade-in mt-24">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Our Vision & Mission</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Building the future through excellence, innovation, and sustainable practices
+                </p>
+            </div>
+
+            <!-- Vision Content -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div class="relative">
+                    <img alt="Vision illustration"
+                        src="https://storage.googleapis.com/a1aa/image/P9kjMmH9qJ-culHOdUhmqxc908kaLaxjgl1yS0OqKAs.jpg"
+                        class="rounded-xl shadow-xl w-full h-[400px] object-cover transform hover:scale-105 transition duration-500" />
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-500 rounded-lg opacity-10 z-0"></div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-eye text-2xl text-blue-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Our Vision</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Our vision is to be the most trusted and innovative construction consulting firm, delivering exceptional value to our clients. We aim to set the standard for excellence in the industry by:
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-blue-500"></i>
+                            <span class="text-gray-700">Setting industry benchmarks for quality and innovation</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-blue-500"></i>
+                            <span class="text-gray-700">Building lasting client relationships based on trust</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-blue-500"></i>
+                            <span class="text-gray-700">Fostering sustainable construction practices</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mission Content -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 order-2 md:order-1">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-flag text-2xl text-blue-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Our Mission</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Our mission is to provide top-notch construction consulting services that exceed our clients' expectations through:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <i class="fas fa-award text-blue-500"></i>
+                                <h4 class="font-semibold">Quality Excellence</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">Delivering high-quality and cost-effective projects on schedule</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <i class="fas fa-handshake text-blue-500"></i>
+                                <h4 class="font-semibold">Professional Integrity</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">Maintaining highest levels of professionalism and fairness</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <i class="fas fa-users text-blue-500"></i>
+                                <h4 class="font-semibold">Client Satisfaction</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">Building lasting relationships through exceptional service</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <i class="fas fa-shield-alt text-blue-500"></i>
+                                <h4 class="font-semibold">Safety First</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">Ensuring safe and productive work environments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative order-1 md:order-2">
+                    <img alt="Mission illustration"
+                        src="https://storage.googleapis.com/a1aa/image/yKPd55IbXbVNc7FUUXwfVK4upPmoM9vmwTCfuBGMdRg.jpg"
+                        class="rounded-xl shadow-xl w-full h-[400px] object-cover transform hover:scale-105 transition duration-500" />
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-500 rounded-lg opacity-10 z-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section class="py-16 bg-gray-100 fade-in">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Our Strategic Goals</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Driving excellence through clear objectives and continuous improvement
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Excellence in Quality Card -->
+                <div class="group">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="relative h-48">
+                            <img src="https://storage.googleapis.com/a1aa/image/EAWT9lUVLNKce2OGyOHHsrRGiEiejxOjuwgG_JyTQ5c.jpg"
+                                alt="Excellence in Quality"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="absolute bottom-4 left-4 text-white">
+                                    <p class="text-sm font-medium">Goal 01</p>
+                                    <p class="text-xs opacity-75">Industry Leadership</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-award text-xl text-blue-500"></i>
+                                </div>
+                                <h3 class="text-xl font-bold">Excellence in Quality</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                To be recognized as a leader in the construction consulting industry by consistently delivering projects that meet the highest standards of quality and safety.
+                            </p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                    <span>Quality management systems</span>
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                    <span>Industry certifications</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client Relationships Card -->
+                <div class="group">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="relative h-48">
+                            <img src="https://storage.googleapis.com/a1aa/image/uekJHMxMi-fvYgdPHcXIDS0yZsiR0-xsgMt4yQ9clcE.jpg"
+                                alt="Client Relationships"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="absolute bottom-4 left-4 text-white">
+                                    <p class="text-sm font-medium">Goal 02</p>
+                                    <p class="text-xs opacity-75">Client Success</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-handshake text-xl text-blue-500"></i>
+                                </div>
+                                <h3 class="text-xl font-bold">Client Relationships</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                To foster long-term relationships with our clients by providing exceptional service and value, ensuring their satisfaction and loyalty.
+                            </p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                    <span>Client satisfaction surveys</span>
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                    <span>Relationship management</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Innovation Card -->
+                <div class="group">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="relative h-48">
+                            <img src="https://storage.googleapis.com/a1aa/image/yKPd55IbXbVNc7FUUXwfVK4upPmoM9vmwTCfuBGMdRg.jpg"
+                                alt="Innovation and Improvement"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="absolute bottom-4 left-4 text-white">
+                                    <p class="text-sm font-medium">Goal 03</p>
+                                    <p class="text-xs opacity-75">Continuous Innovation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-lightbulb text-xl text-blue-500"></i>
+                                </div>
+                                <h3 class="text-xl font-bold">Innovation & Growth</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                To continuously improve our processes and services through innovation, training, and the adoption of new technologies.
+                            </p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                    <span>Technology adoption</span>
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                    <span>Staff development</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- vision section -->
-    <section class="py-12 bg-gray-100 fade-in">
+    <!-- <section class="py-12 bg-gray-100 fade-in">
         <div class="container mx-auto flex flex-wrap items-center px-4">
             <div class="w-full md:w-1/2 p-4">
                 <img alt="A blueprint and construction tools on a table" class="w-full h-64 object-cover rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/P9kjMmH9qJ-culHOdUhmqxc908kaLaxjgl1yS0OqKAs.jpg" width="600" />
@@ -152,9 +382,9 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Mission Section -->
-    <section class="py-12 fade-in">
+    <!-- <section class="py-12 fade-in">
         <div class="container mx-auto flex flex-wrap items-center px-4">
             <div class="w-full md:w-1/2 p-4 order-2 md:order-1">
                 <h3 class="text-2xl font-bold mb-4">
@@ -174,15 +404,15 @@
                 <img alt="A team of construction consultants in a meeting" class="w-full h-64 object-cover rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/yKPd55IbXbVNc7FUUXwfVK4upPmoM9vmwTCfuBGMdRg.jpg" width="600" />
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Goals Section -->
-    <section class="py-12 bg-gray-100 fade-in">
+    <!-- <section class="py-12 bg-gray-100 fade-in">
         <div class="container mx-auto text-center px-4">
             <h2 class="text-3xl font-bold mb-6">Our Goals</h2>
-            <div class="flex flex-wrap justify-center">
-                <!-- Card 1 -->
-                <div class="w-full md:w-1/3 p-4">
+            <div class="flex flex-wrap justify-center"> -->
+    <!-- Card 1 -->
+    <!-- <div class="w-full md:w-1/3 p-4">
                     <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
                         <img alt="A construction site with cranes and building materials" class="w-full h-48 object-cover mb-4 rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/EAWT9lUVLNKce2OGyOHHsrRGiEiejxOjuwgG_JyTQ5c.jpg" width="600" />
                         <h3 class="text-xl font-bold mb-2">Excellence in Quality</h3>
@@ -190,9 +420,9 @@
                             To be recognized as a leader in the construction consulting industry by consistently delivering projects that meet the highest standards of quality and safety.
                         </p>
                     </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="w-full md:w-1/3 p-4">
+                </div> -->
+    <!-- Card 2 -->
+    <!-- <div class="w-full md:w-1/3 p-4">
                     <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
                         <img alt="A modern commercial building" class="w-full h-48 object-cover mb-4 rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/uekJHMxMi-fvYgdPHcXIDS0yZsiR0-xsgMt4yQ9clcE.jpg" width="600" />
                         <h3 class="text-xl font-bold mb-2">Client Relationships</h3>
@@ -200,9 +430,9 @@
                             To foster long-term relationships with our clients by providing exceptional service and value, ensuring their satisfaction and loyalty.
                         </p>
                     </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="w-full md:w-1/3 p-4">
+                </div> -->
+    <!-- Card 3 -->
+    <!-- <div class="w-full md:w-1/3 p-4">
                     <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition-transform duration-300">
                         <img alt="A team of construction consultants in a meeting" class="w-full h-48 object-cover mb-4 rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/yKPd55IbXbVNc7FUUXwfVK4upPmoM9vmwTCfuBGMdRg.jpg" width="600" />
                         <h3 class="text-xl font-bold mb-2">Innovation and Improvement</h3>
@@ -213,7 +443,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- Footer Section -->

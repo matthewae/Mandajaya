@@ -110,7 +110,145 @@
             </li>
         </ul>
     </nav>
-    <section class="py-12 bg-gray-100">
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-gradient-to-b from-gray-100 to-white fade-in mt-24">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    We would love to hear from you! Please fill out the form below to get in touch with us.
+                </p>
+            </div>
+
+            <!-- Contact Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <form id="contact-form" class="space-y-6">
+                        <!-- Name & Phone Fields -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-semibold mb-2" for="name">Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition duration-300"
+                                    placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-semibold mb-2" for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition duration-300"
+                                    placeholder="Your Phone Number">
+                            </div>
+                        </div>
+
+                        <!-- Email & Subject Fields -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-semibold mb-2" for="email">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition duration-300"
+                                    placeholder="Your Email">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-semibold mb-2" for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition duration-300"
+                                    placeholder="Message Subject">
+                            </div>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div>
+                            <label class="block text-gray-700 text-sm font-semibold mb-2" for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition duration-300"
+                                placeholder="Your Message"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="flex justify-end">
+                            <button onclick="sendEmail()" type="button"
+                                class="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transform hover:-translate-y-1 transition duration-300 flex items-center space-x-2">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <!-- Info Card -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <!-- Address -->
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-map-marker-alt text-xl text-blue-500"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-1">Our Location</h4>
+                                    <p class="text-gray-600">Jl. Kota Mas 1 No.18, Kota Cimahi, Jawa Barat, 40511</p>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-phone text-xl text-blue-500"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-1">Phone Number</h4>
+                                    <p class="text-gray-600">+62 22-2335599</p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-envelope text-xl text-blue-500"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-1">Email</h4>
+                                    <a href="mailto:info@mandajaya.com" class="text-blue-500 hover:text-blue-600 transition duration-300">
+                                        info@mandajaya.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold mb-6">Our Location</h3>
+                        <div class="h-[300px] rounded-lg overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps?q=-6.866557,107.539226&amp;hl=es;z=14&amp;output=embed"
+                                class="w-full h-full rounded-lg"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <!-- <section class="py-12 bg-gray-100">
         <div class="container mx-auto text-center px-4">
             <h2 class="text-3xl font-bold mb-6">
                 Contact Us
@@ -172,7 +310,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300">
         <!-- Main Footer -->
         <div class="container mx-auto px-4 py-12">

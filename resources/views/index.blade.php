@@ -138,34 +138,19 @@
 
         /* Navigation Arrows */
         .carousel-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            background: rgba(0, 0, 0, 0.5);
-            border: none;
-            border-radius: 50%;
-            color: white;
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            z-index: 10;
-        }
-
-        .carousel-arrow:hover {
-            background: rgba(0, 0, 0, 0.8);
+            @apply w-12 h-12 bg-black/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/40 transition-all duration-300 cursor-pointer z-20;
         }
 
         .carousel-arrow.prev {
-            left: 20px;
+            @apply transform hover:-translate-x-1;
         }
 
         .carousel-arrow.next {
-            right: 20px;
+            @apply transform hover:translate-x-1;
+        }
+
+        .carousel-arrow i {
+            @apply text-2xl;
         }
 
         .loading {
@@ -239,6 +224,42 @@
         .company-logo:hover {
             transform: scale(1.05);
         }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 0.5s ease-out forwards;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .carousel-arrow {
+            @apply w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition duration-300;
+        }
+
+        .hero-dot {
+            @apply w-3 h-3 rounded-full bg-white/50 transition duration-300;
+        }
+
+        .hero-dot.active {
+            @apply bg-white w-12;
+        }
     </style>
 </head>
 
@@ -294,10 +315,127 @@
         </ul>
     </nav>
 
+    <!-- Hero Section with Carousel -->
+    <section class="relative fade-in carousel min-h-screen">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item relative">
+                <img alt="A construction site with cranes and building materials"
+                    class="w-full h-screen object-cover"
+                    src="https://storage.googleapis.com/a1aa/image/2w6BKAWJxzyfcjYrrDjt1RYrVFjsM30VudM8t55dJos.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent">
+                    <div class="container mx-auto px-4 h-full flex items-center">
+                        <div class="max-w-3xl text-white space-y-6">
+                            <h1 class="text-5xl md:text-7xl font-bold leading-tight animate-fade-in-up">
+                                Building Excellence, <br />
+                                <span class="text-blue-400">Shaping Tomorrow</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-gray-300 animate-fade-in-up delay-200">
+                                Expert construction consulting services for sustainable and innovative solutions
+                            </p>
+                            <div class="flex flex-wrap gap-4 animate-fade-in-up delay-300">
+                                <a href="service"
+                                    class="px-8 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300 flex items-center space-x-2">
+                                    <span>Our Services</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="contact"
+                                    class="px-8 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:text-gray-900 transition duration-300">
+                                    Contact Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Slide 2 -->
+            <div class="carousel-item relative">
+                <img alt="A team of construction consultants in a meeting"
+                    class="w-full h-screen object-cover"
+                    src="https://storage.googleapis.com/a1aa/image/VkfnTaHx8Ms9h7goIZNN_bZAvjX4IVvynWI1esfv6pw.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent">
+                    <div class="container mx-auto px-4 h-full flex items-center">
+                        <div class="max-w-3xl text-white space-y-6">
+                            <h1 class="text-5xl md:text-7xl font-bold leading-tight animate-fade-in-up">
+                                Expertise That <br />
+                                <span class="text-blue-400">Delivers Results</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-gray-300 animate-fade-in-up delay-200">
+                                Professional team dedicated to your project's success
+                            </p>
+                            <div class="flex flex-wrap gap-4 animate-fade-in-up delay-300">
+                                <a href="project"
+                                    class="px-8 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300 flex items-center space-x-2">
+                                    <span>View Projects</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="team"
+                                    class="px-8 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:text-gray-900 transition duration-300">
+                                    Meet Our Team
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item relative">
+                <img alt="A construction site with workers and machinery"
+                    class="w-full h-screen object-cover"
+                    src="https://storage.googleapis.com/a1aa/image/XhHRNsT_PydtlbeP8FLp-aT0ykQ01SRkYd700FJXAbo.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent">
+                    <div class="container mx-auto px-4 h-full flex items-center">
+                        <div class="max-w-3xl text-white space-y-6">
+                            <h1 class="text-5xl md:text-7xl font-bold leading-tight animate-fade-in-up">
+                                Innovation in <br />
+                                <span class="text-blue-400">Construction</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-gray-300 animate-fade-in-up delay-200">
+                                Leading the way with cutting-edge solutions
+                            </p>
+                            <div class="flex flex-wrap gap-4 animate-fade-in-up delay-300">
+                                <a href="client"
+                                    class="px-8 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300 flex items-center space-x-2">
+                                    <span>Our Clients</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing"
+                                    target="_blank"
+                                    class="px-8 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:text-gray-900 transition duration-300 flex items-center space-x-2">
+                                    <span>Company Profile</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Navigation -->
+        <div class="absolute bottom-8 left-0 right-0 z-10">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <div class="flex space-x-3">
+                    <button class="dot hero-dot active" onclick="showHeroSlide(0)" aria-label="Slide 1"></button>
+                    <button class="dot hero-dot" onclick="showHeroSlide(1)" aria-label="Slide 2"></button>
+                    <button class="dot hero-dot" onclick="showHeroSlide(2)" aria-label="Slide 3"></button>
+                </div>
+                <!-- <div class="flex space-x-4">
+                    <button class="carousel-arrow prev group" onclick="prevHeroSlide()" aria-label="Previous slide">
+                        <i class="fas fa-chevron-left group-hover:scale-125 transition-transform duration-300"></i>
+                    </button>
+                    <button class="carousel-arrow next group" onclick="nextHeroSlide()" aria-label="Next slide">
+                        <i class="fas fa-chevron-right group-hover:scale-125 transition-transform duration-300"></i>
+                    </button>
+                </div> -->
+            </div>
+        </div>
+    </section>
 
     <!-- Hero Section with Carousel -->
-    <section class="relative fade-in carousel">
+    <!-- <section class="relative fade-in carousel">
         <div class="carousel-inner">
             <div class="carousel-item">
                 <img alt="A construction site with cranes and building materials" class="w-full h-screen object-cover"
@@ -317,9 +455,9 @@
                 <h1 class="text-4xl md:text-6xl font-bold mb-4">Building the Future, Restoring the Past</h1>
                 <p class="text-lg md:text-2xl mb-6">Expert construction consulting services for your projects</p>
             </div>
-        </div>
-        <!-- Add Hero Carousel Navigation -->
-        <div class="carousel-dots">
+        </div> -->
+    <!-- Add Hero Carousel Navigation -->
+    <!-- <div class="carousel-dots">
             <button class="dot active" onclick="showHeroSlide(0)" aria-label="Slide 1"></button>
             <button class="dot" onclick="showHeroSlide(1)" aria-label="Slide 2"></button>
             <button class="dot" onclick="showHeroSlide(2)" aria-label="Slide 3"></button>
@@ -330,9 +468,131 @@
         <button class="carousel-arrow next" onclick="nextHeroSlide()" aria-label="Next slide">
             <i class="fas fa-chevron-right"></i>
         </button>
+    </section> -->
+
+    <!-- About Section -->
+    <section class="py-16 bg-gray-100 fade-in">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">About Us</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Building excellence through innovation and expertise since 2022
+                </p>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Our Story</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        PT. Mandajaya Rekayasa Konstruksi (MRK) was founded in 2022 with a vision of providing top-notch construction consulting services. Over the years, we have grown into a leading firm in the industry, known for our commitment to quality, innovation, and client satisfaction.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Our expertise spans various sectors, including infrastructure, commercial, and residential projects, allowing us to offer comprehensive solutions tailored to each client's unique needs.
+                    </p>
+
+                    <!-- Key Points -->
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-medal text-blue-500"></i>
+                                </div>
+                                <span class="font-semibold">Excellence</span>
+                            </div>
+                            <p class="text-sm text-gray-600">Committed to delivering the highest quality services</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-lightbulb text-blue-500"></i>
+                                </div>
+                                <span class="font-semibold">Innovation</span>
+                            </div>
+                            <p class="text-sm text-gray-600">Embracing new technologies and methodologies</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="relative overflow-hidden rounded-lg h-48">
+                            <img src="https://storage.googleapis.com/a1aa/image/6uX7DH_UdlYTo8lGIrgYHyS9ltoithyUY4ZwL3ayTQ4.jpg"
+                                alt="Construction project"
+                                class="w-full h-full object-cover transform hover:scale-110 transition duration-500" />
+                        </div>
+                        <div class="relative overflow-hidden rounded-lg h-32">
+                            <img src="https://storage.googleapis.com/a1aa/image/Mtzk_0i-wvNSq3E1X0vZsetVrXnh6q78IsdzDzYNlQQ.jpg"
+                                alt="Team meeting"
+                                class="w-full h-full object-cover transform hover:scale-110 transition duration-500" />
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="relative overflow-hidden rounded-lg h-32">
+                            <img src="https://storage.googleapis.com/a1aa/image/gy0ekscxTGJT9LsrsvJLDnLz16xboHeTBQhkKdiu7pQ.jpg"
+                                alt="Construction site"
+                                class="w-full h-full object-cover transform hover:scale-110 transition duration-500" />
+                        </div>
+                        <div class="relative overflow-hidden rounded-lg h-48">
+                            <img src="https://storage.googleapis.com/a1aa/image/5GeLStJhXeIzCZz6r3NfaKNUojKTk22cx0Wdxzxwg2Q.jpg"
+                                alt="Project planning"
+                                class="w-full h-full object-cover transform hover:scale-110 transition duration-500" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="team" class="group">
+                    <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition duration-300">
+                        <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-users text-2xl text-blue-500 group-hover:scale-110 transition duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-blue-500 transition duration-300">Our Team</h3>
+                        <p class="text-gray-600 mb-4">Expert professionals dedicated to delivering excellence in every project.</p>
+                        <span class="text-blue-500 flex items-center">
+                            Learn More
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition duration-300"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="project" class="group">
+                    <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition duration-300">
+                        <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-building text-2xl text-blue-500 group-hover:scale-110 transition duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-blue-500 transition duration-300">Our Projects</h3>
+                        <p class="text-gray-600 mb-4">Diverse portfolio of successful projects across various sectors.</p>
+                        <span class="text-blue-500 flex items-center">
+                            Learn More
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition duration-300"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="vision" class="group">
+                    <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition duration-300">
+                        <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-eye text-2xl text-blue-500 group-hover:scale-110 transition duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-blue-500 transition duration-300">Our Vision</h3>
+                        <p class="text-gray-600 mb-4">Building a better future through innovation and excellence.</p>
+                        <span class="text-blue-500 flex items-center">
+                            Learn More
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition duration-300"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
     </section>
     <!-- About Section -->
-    <section class="py-12 bg-gray-100 fade-in">
+    <!-- <section class="py-12 bg-gray-100 fade-in">
         <div class="container mx-auto text-center px-4">
             <h2 class="text-3xl font-bold mb-6">
                 About Us
@@ -387,7 +647,7 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Services Section -->
     <section class="py-16 bg-gradient-to-b from-white to-gray-50 fade-in">
         <div class="container mx-auto px-4">
@@ -871,7 +1131,6 @@
         // Hero Section Carousel
         let currentHeroSlide = 0;
         const heroSlides = document.querySelectorAll('.carousel-item');
-        const heroDots = document.querySelectorAll('.hero-dot');
 
         function showHeroSlide(index) {
             if (index >= heroSlides.length) {
@@ -884,11 +1143,6 @@
 
             const offset = -currentHeroSlide * 100;
             document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
-
-            // Update dots
-            heroDots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentHeroSlide);
-            });
         }
 
         function nextHeroSlide() {
@@ -899,6 +1153,8 @@
             showHeroSlide(currentHeroSlide - 1);
         }
 
+        // Auto advance slides
+        setInterval(nextHeroSlide, 4000);
         // Client Section Carousel
         let currentClientSlide = 0;
         const clientSlides = document.querySelectorAll('.carousel-slide');
