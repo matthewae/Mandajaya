@@ -155,8 +155,9 @@
             </li>
         </ul>
     </nav>
+
     <!-- Our Team Section -->
-    <section class="py-16 bg-gradient-to-b from-gray-100 to-white fade-in mt-24"> <!-- Added mt-24 for spacing -->
+    <!-- <section class="py-16 bg-gradient-to-b from-gray-100 to-white fade-in">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold mb-4">Meet Our Team</h2>
@@ -164,14 +165,14 @@
                 <p class="text-gray-600 max-w-2xl mx-auto">
                     Our diverse team of experts brings together years of experience and dedication to deliver exceptional results
                 </p>
-            </div>
+            </div> -->
 
-            <!-- Leadership Team -->
-            <div class="mb-16">
+    <!-- Leadership Team -->
+    <!-- <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-8 text-center">Leadership Team</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Leaders Card Template -->
-                    <div class="group">
+                    Leaders Card Template -->
+    <!-- <div class="group">
                         <div class="relative overflow-hidden rounded-xl bg-white shadow-lg transform hover:-translate-y-2 transition duration-500">
                             <div class="relative h-80">
                                 <img alt="Portrait of John Doe, Founder and CEO"
@@ -195,9 +196,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Repeat for other leadership team members -->
-                    <div class="group">
+                    </div> -->
+    <!-- Repeat for other leadership team members -->
+    <!-- <div class="group">
                         <div class="relative overflow-hidden rounded-xl bg-white shadow-lg transform hover:-translate-y-2 transition duration-500">
                             <div class="relative h-80">
                                 <img alt="Portrait of John Doe, Founder and CEO"
@@ -248,14 +249,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- Experts Section -->
-            <div class="mb-16">
+    <!-- Experts Section -->
+    <!-- <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-8 text-center">Our Experts</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- Expert Card Template -->
-                    <div class="group">
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6"> -->
+    <!-- Expert Card Template -->
+    <!-- <div class="group">
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
                             <div class="relative h-64">
                                 <img alt="Portrait of Expert"
@@ -273,9 +274,9 @@
                                 <p class="text-sm text-gray-600">Specializes in large-scale construction management</p>
                             </div>
                         </div>
-                    </div>
-                    <!-- Repeat for other experts -->
-                    <div class="group">
+                    </div> -->
+    <!-- Repeat for other experts -->
+    <!-- <div class="group">
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
                             <div class="relative h-64">
                                 <img alt="Portrait of Expert"
@@ -371,14 +372,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- Staff Section -->
-            <div>
+    <!-- Staff Section -->
+    <!-- <div>
                 <h3 class="text-2xl font-bold mb-8 text-center">Supporting Team</h3>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <!-- Staff Card Template -->
-                    <div class="group">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6"> -->
+    <!-- Staff Card Template -->
+    <!-- <div class="group">
                         <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
                             <div class="relative w-20 h-20 mx-auto mb-3">
                                 <img alt="Staff Member"
@@ -390,22 +391,9 @@
                                 <p class="text-sm text-gray-500">Financial Analyst</p>
                             </div>
                         </div>
-                    </div>
-                    <!-- Repeat for other staff members -->
-                    <div class="group">
-                        <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
-                            <div class="relative w-20 h-20 mx-auto mb-3">
-                                <img alt="Staff Member"
-                                    class="w-full h-full object-cover rounded-full"
-                                    src="https://storage.googleapis.com/a1aa/image/Koaws9GC3mBe5rIzrAdn9ELXnUdG7b7D6mlPuAdNyNA.jpg" />
-                            </div>
-                            <div class="text-center">
-                                <h4 class="font-semibold mb-1">Sarah Johnson</h4>
-                                <p class="text-sm text-gray-500">Financial Analyst</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="group">
+                    </div> -->
+    <!-- Repeat for other staff members -->
+    <!-- <div class="group">
                         <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
                             <div class="relative w-20 h-20 mx-auto mb-3">
                                 <img alt="Staff Member"
@@ -444,32 +432,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class="group">
-                        <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
-                            <div class="relative w-20 h-20 mx-auto mb-3">
-                                <img alt="Staff Member"
-                                    class="w-full h-full object-cover rounded-full"
-                                    src="https://storage.googleapis.com/a1aa/image/Koaws9GC3mBe5rIzrAdn9ELXnUdG7b7D6mlPuAdNyNA.jpg" />
-                            </div>
-                            <div class="text-center">
-                                <h4 class="font-semibold mb-1">Sarah Johnson</h4>
-                                <p class="text-sm text-gray-500">Financial Analyst</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <!-- <section class="py-12 bg-gray-100 fade-in">
+    <!-- Our Team Section -->
+    <section class="py-12 bg-gray-100 fade-in mt-24"> <!-- Added mt-24 class -->
         <div class="container mx-auto text-center px-4">
-            <h2 class="text-3xl font-bold mb-6">
-                Our Team
-            </h2> -->
-    <!-- Founders -->
-    <!-- <h3 class="text-2xl font-bold mb-4">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Our Team</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Meet the dedicated professionals behind our success
+                </p>
+            </div>
+            <!-- Founders -->
+            <h3 class="text-2xl font-bold mb-4">
                 Founders
             </h3>
             <div class="flex flex-wrap justify-center mb-12">
@@ -515,9 +495,9 @@
                         </p>
                     </div>
                 </div>
-            </div> -->
-    <!-- Experts -->
-    <!-- <h3 class="text-2xl font-bold mb-4">
+            </div>
+            <!-- Experts -->
+            <h3 class="text-2xl font-bold mb-4">
                 Experts
             </h3>
             <div class="flex flex-wrap justify-center mb-12">
@@ -591,9 +571,9 @@
                         </p>
                     </div>
                 </div>
-            </div> -->
-    <!-- Staff -->
-    <!-- <h3 class="text-2xl font-bold mb-4">
+            </div>
+            <!-- Staff -->
+            <h3 class="text-2xl font-bold mb-4">
                 Staff
             </h3>
             <div class="flex flex-wrap justify-center">
@@ -683,7 +663,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300">
         <!-- Main Footer -->

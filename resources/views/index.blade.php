@@ -67,22 +67,22 @@
 
         .carousel-inner {
             display: flex;
-            transition: transform 0.5s ease-in-out;
+            transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .carousel-item {
-            min-width: 100%;
-            box-sizing: border-box;
+            flex: 0 0 100%;
+            opacity: 0.8;
+            transition: opacity 1s ease;
         }
 
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
+        .carousel-item.active {
+            opacity: 1;
         }
 
-        .carousel-slide {
-            min-width: 100%;
-            box-sizing: border-box;
+        /* Add this for smooth infinite loop */
+        .carousel-inner.no-transition {
+            transition: none;
         }
 
         /* Interactive Elements */
@@ -134,23 +134,6 @@
 
         .dot:hover {
             background: rgba(255, 255, 255, 0.8);
-        }
-
-        /* Navigation Arrows */
-        .carousel-arrow {
-            @apply w-12 h-12 bg-black/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/40 transition-all duration-300 cursor-pointer z-20;
-        }
-
-        .carousel-arrow.prev {
-            @apply transform hover:-translate-x-1;
-        }
-
-        .carousel-arrow.next {
-            @apply transform hover:translate-x-1;
-        }
-
-        .carousel-arrow i {
-            @apply text-2xl;
         }
 
         .loading {
@@ -247,18 +230,6 @@
 
         .delay-300 {
             animation-delay: 0.3s;
-        }
-
-        .carousel-arrow {
-            @apply w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition duration-300;
-        }
-
-        .hero-dot {
-            @apply w-3 h-3 rounded-full bg-white/50 transition duration-300;
-        }
-
-        .hero-dot.active {
-            @apply bg-white w-12;
         }
     </style>
 </head>
@@ -416,20 +387,15 @@
 
         <!-- Hero Navigation -->
         <div class="absolute bottom-8 left-0 right-0 z-10">
-            <div class="container mx-auto px-4 flex justify-between items-center">
-                <div class="flex space-x-3">
-                    <button class="dot hero-dot active" onclick="showHeroSlide(0)" aria-label="Slide 1"></button>
-                    <button class="dot hero-dot" onclick="showHeroSlide(1)" aria-label="Slide 2"></button>
-                    <button class="dot hero-dot" onclick="showHeroSlide(2)" aria-label="Slide 3"></button>
+            <div class="container mx-auto px-4">
+                <!-- Centered Dots -->
+                <div class="flex justify-center">
+                    <div class="flex space-x-3">
+                        <button class="dot hero-dot active" onclick="showHeroSlide(0)" aria-label="Slide 1"></button>
+                        <button class="dot hero-dot" onclick="showHeroSlide(1)" aria-label="Slide 2"></button>
+                        <button class="dot hero-dot" onclick="showHeroSlide(2)" aria-label="Slide 3"></button>
+                    </div>
                 </div>
-                <!-- <div class="flex space-x-4">
-                    <button class="carousel-arrow prev group" onclick="prevHeroSlide()" aria-label="Previous slide">
-                        <i class="fas fa-chevron-left group-hover:scale-125 transition-transform duration-300"></i>
-                    </button>
-                    <button class="carousel-arrow next group" onclick="nextHeroSlide()" aria-label="Next slide">
-                        <i class="fas fa-chevron-right group-hover:scale-125 transition-transform duration-300"></i>
-                    </button>
-                </div> -->
             </div>
         </div>
     </section>
@@ -1128,33 +1094,96 @@
         </div>
     </footer>
     <script>
-        // Hero Section Carousel
-        let currentHeroSlide = 0;
-        const heroSlides = document.querySelectorAll('.carousel-item');
+        const heroCarousel = {
+            currentSlide: 0,
+            slides: document.querySelectorAll('.carousel-item'),
+            dots: document.querySelectorAll('.hero-dot'),
+            inner: document.querySelector('.carousel-inner'),
+            isAnimating: false,
 
-        function showHeroSlide(index) {
-            if (index >= heroSlides.length) {
-                currentHeroSlide = 0;
-            } else if (index < 0) {
-                currentHeroSlide = heroSlides.length - 1;
-            } else {
-                currentHeroSlide = index;
+            init() {
+                // Clone first and last slides for smooth infinite loop
+                const firstSlideClone = this.slides[0].cloneNode(true);
+                const lastSlideClone = this.slides[this.slides.length - 1].cloneNode(true);
+                this.inner.appendChild(firstSlideClone);
+                this.inner.insertBefore(lastSlideClone, this.slides[0]);
+
+                this.showSlide(1); // Start at first actual slide
+                this.startAutoPlay();
+                this.setupEventListeners();
+            },
+
+            showSlide(index, isAuto = false) {
+                if (this.isAnimating) return;
+                this.isAnimating = true;
+
+                const totalSlides = this.slides.length;
+                const offset = -index * 100;
+                this.inner.style.transform = `translateX(${offset}%)`;
+
+                // Update dots based on actual slide position
+                let actualIndex = index - 1;
+                if (actualIndex === -1) actualIndex = totalSlides - 1;
+                if (actualIndex === totalSlides) actualIndex = 0;
+
+                this.dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === actualIndex);
+                });
+
+                // Handle infinite scroll transition
+                if (index === 0 || index === totalSlides + 1) {
+                    setTimeout(() => {
+                        this.inner.classList.add('no-transition');
+                        const newIndex = index === 0 ? totalSlides : 1;
+                        this.inner.style.transform = `translateX(-${newIndex * 100}%)`;
+
+                        // Force reflow
+                        this.inner.offsetHeight;
+
+                        this.inner.classList.remove('no-transition');
+                        this.isAnimating = false;
+                        this.currentSlide = newIndex;
+                    }, 1000);
+                } else {
+                    setTimeout(() => {
+                        this.isAnimating = false;
+                        this.currentSlide = index;
+                    }, 1000);
+                }
+            },
+
+            nextSlide() {
+                this.showSlide(this.currentSlide + 1);
+            },
+
+            prevSlide() {
+                this.showSlide(this.currentSlide - 1);
+            },
+
+            startAutoPlay() {
+                setInterval(() => {
+                    if (!this.isAnimating) {
+                        this.nextSlide();
+                    }
+                }, 6000);
+            },
+
+            setupEventListeners() {
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        if (!this.isAnimating) {
+                            this.showSlide(index + 1);
+                        }
+                    });
+                });
             }
+        };
 
-            const offset = -currentHeroSlide * 100;
-            document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
-        }
+        // Initialize carousel when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            heroCarousel.init();
+        });
 
-        function nextHeroSlide() {
-            showHeroSlide(currentHeroSlide + 1);
-        }
-
-        function prevHeroSlide() {
-            showHeroSlide(currentHeroSlide - 1);
-        }
-
-        // Auto advance slides
-        setInterval(nextHeroSlide, 4000);
         // Client Section Carousel
         let currentClientSlide = 0;
         const clientSlides = document.querySelectorAll('.carousel-slide');
