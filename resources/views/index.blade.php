@@ -167,6 +167,7 @@
         .carousel-arrow.next {
             right: 20px;
         }
+
         .loading {
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -195,31 +196,77 @@
         .carousel .carousel-dots .client-dot:hover {
             background: rgba(0, 0, 0, 0.6);
         }
+
+        .navbar {
+            background: rgba(17, 24, 39, 0.95);
+            backdrop-filter: blur(8px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            background: rgba(17, 24, 39, 0.98);
+        }
+
+        .nav-link {
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .company-logo {
+            transition: transform 0.3s ease;
+        }
+
+        .company-logo:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 
 <body class="font-roboto">
 
-    <nav class="bg-gray-900 p-4 shadow-lg">
+    <nav class="navbar p-4 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <img alt="Company logo" class="h-10 w-10" src="{{ asset('storage/Logo FI.png') }}" />
-                <a class="text-white text-2xl font-bold tracking-wide hover:text-blue-400 transition duration-300" href="/">
-                    Mandajaya Rekayasa Konstruksi
+                <img alt="Company logo" class="h-12 w-12 company-logo" src="{{ asset('storage/Logo FI.png') }}" />
+                <a class="text-white text-2xl font-bold tracking-wide hover:text-blue-400 transition duration-300 group" href="/">
+                    <span class="text-white group-hover:text-blue-500 transition duration-300">Mandajaya</span> Rekayasa Konstruksi
                 </a>
             </div>
+
             <!-- Desktop Menu -->
-            <ul class="hidden md:flex space-x-6 items-center">
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="/">Home</a></li>
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="service">Services</a></li>
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="project">Projects</a></li>
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="team">Our Team</a></li>
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="client">Clients</a></li>
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
-                <!-- Company Profile Button -->
+            <ul class="hidden md:flex space-x-8 items-center">
+                <li><a class="nav-link text-gray-300 hover:text-blue-400 transition duration-300" href="/">Home</a></li>
+                <li><a class="nav-link text-gray-300 hover:text-blue-400 transition duration-300" href="service">Services</a></li>
+                <li><a class="nav-link text-gray-300 hover:text-blue-400 transition duration-300" href="project">Projects</a></li>
+                <li><a class="nav-link text-gray-300 hover:text-blue-400 transition duration-300" href="team">Our Team</a></li>
+                <li><a class="nav-link text-gray-300 hover:text-blue-400 transition duration-300" href="client">Clients</a></li>
+                <li><a class="nav-link text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
                 <li>
-                    <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing" target="_blank" class="border border-blue-500 text-blue-500 px-5 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300 flex items-center">
-                        Company Profile
+                    <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing"
+                        target="_blank"
+                        class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300 flex items-center space-x-2">
+                        <span>Company Profile</span>
+                        <i class="fas fa-external-link-alt text-sm"></i>
                     </a>
                 </li>
             </ul>
@@ -342,124 +389,181 @@
         </div>
     </section>
     <!-- Services Section -->
-    <section class="py-12 fade-in">
-        <div class="container mx-auto text-center px-4">
-            <h2 class="text-3xl font-bold mb-6">
-                Our Services
-            </h2>
-            <div class="flex flex-wrap justify-center">
-                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
-                    <a href="service" class="block service-icon">
-                        <div class="p-6 rounded-lg">
-                            <i class="fas fa-hard-hat text-6xl text-gray-700 mb-4"></i>
-                            <h3 class="text-xl font-bold">
-                                Project Management
-                            </h3>
+    <section class="py-16 bg-gradient-to-b from-white to-gray-50 fade-in">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Our Services</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    We provide comprehensive construction consulting services tailored to meet your project needs
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Project Management -->
+                <div class="group">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                        <div class="w-16 h-16 bg-blue-50 rounded-lg mb-6 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
+                            <i class="fas fa-hard-hat text-3xl text-blue-500 group-hover:text-white transition-colors duration-300"></i>
                         </div>
-                    </a>
+                        <h3 class="text-xl font-bold mb-4">Project Management</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Professional project planning, execution, and monitoring for optimal results.
+                        </p>
+                    </div>
                 </div>
-                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
-                    <a href="service" class="block service-icon">
-                        <div class="p-6 rounded-lg">
-                            <i class="fas fa-drafting-compass text-6xl text-gray-700 mb-4"></i>
-                            <h3 class="text-xl font-bold">
-                                Design Consultation
-                            </h3>
+
+                <!-- Design Consultation -->
+                <div class="group">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                        <div class="w-16 h-16 bg-blue-50 rounded-lg mb-6 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
+                            <i class="fas fa-drafting-compass text-3xl text-blue-500 group-hover:text-white transition-colors duration-300"></i>
                         </div>
-                    </a>
+                        <h3 class="text-xl font-bold mb-4">Design Consultation</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Expert design solutions that blend functionality with aesthetics.
+                        </p>
+                    </div>
                 </div>
-                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
-                    <a href="service" class="block service-icon">
-                        <div class="p-6 rounded-lg">
-                            <i class="fas fa-tools text-6xl text-gray-700 mb-4"></i>
-                            <h3 class="text-xl font-bold">
-                                Construction Supervision
-                            </h3>
+
+                <!-- Construction Supervision -->
+                <div class="group">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                        <div class="w-16 h-16 bg-blue-50 rounded-lg mb-6 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
+                            <i class="fas fa-tools text-3xl text-blue-500 group-hover:text-white transition-colors duration-300"></i>
                         </div>
-                    </a>
+                        <h3 class="text-xl font-bold mb-4">Construction Supervision</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Thorough oversight ensuring quality and compliance throughout construction.
+                        </p>
+                    </div>
                 </div>
-                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
-                    <a href="service" class="block service-icon">
-                        <div class="p-6 rounded-lg">
-                            <i class="fas fa-building text-6xl text-gray-700 mb-4"></i>
-                            <h3 class="text-xl font-bold">
-                                Quality Assurance
-                            </h3>
+
+                <!-- Quality Assurance -->
+                <div class="group">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                        <div class="w-16 h-16 bg-blue-50 rounded-lg mb-6 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
+                            <i class="fas fa-building text-3xl text-blue-500 group-hover:text-white transition-colors duration-300"></i>
                         </div>
-                    </a>
+                        <h3 class="text-xl font-bold mb-4">Quality Assurance</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Rigorous quality control standards for superior project outcomes.
+                        </p>
+                    </div>
                 </div>
-                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
-                    <a href="service" class="block service-icon">
-                        <div class="p-6 rounded-lg">
-                            <i class="fas fa-chart-line text-6xl text-gray-700 mb-4"></i>
-                            <h3 class="text-xl font-bold">
-                                Cost Estimation
-                            </h3>
-                        </div>
-                    </a>
+            </div>
+
+            <!-- Additional Services -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Cost Estimation -->
+                <div class="bg-white p-6 rounded-xl shadow-lg group hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    <i class="fas fa-chart-line text-3xl text-blue-500 mb-4"></i>
+                    <h3 class="text-lg font-bold mb-2">Cost Estimation</h3>
+                    <p class="text-gray-600 text-sm">Accurate project cost analysis and budgeting</p>
                 </div>
-                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
-                    <a href="service" class="block service-icon">
-                        <div class="p-6 rounded-lg">
-                            <i class="fas fa-file-contract text-6xl text-gray-700 mb-4"></i>
-                            <h3 class="text-xl font-bold">
-                                Contract Administration
-                            </h3>
-                        </div>
-                    </a>
+
+                <!-- Contract Administration -->
+                <div class="bg-white p-6 rounded-xl shadow-lg group hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    <i class="fas fa-file-contract text-3xl text-blue-500 mb-4"></i>
+                    <h3 class="text-lg font-bold mb-2">Contract Administration</h3>
+                    <p class="text-gray-600 text-sm">Comprehensive contract management services</p>
                 </div>
-                <div class="w-full md:w-1/4 lg:w-1/7 p-4">
-                    <a href="service" class="block service-icon">
-                        <div class="p-6 rounded-lg">
-                            <i class="fas fa-recycle text-6xl text-gray-700 mb-4"></i>
-                            <h3 class="text-xl font-bold">
-                                Sustainability Consulting
-                            </h3>
-                        </div>
-                    </a>
+
+                <!-- Sustainability Consulting -->
+                <div class="bg-white p-6 rounded-xl shadow-lg group hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    <i class="fas fa-recycle text-3xl text-blue-500 mb-4"></i>
+                    <h3 class="text-lg font-bold mb-2">Sustainability Consulting</h3>
+                    <p class="text-gray-600 text-sm">Green building and sustainable development solutions</p>
                 </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-12">
+                <a href="service" class="inline-flex items-center px-8 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">
+                    <span>View All Services</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
             </div>
         </div>
     </section>
     <!-- Projects Section -->
-    <section class="py-12 bg-gray-100 fade-in">
-        <div class="container mx-auto text-center px-4">
-            <h2 class="text-3xl font-bold mb-6">
-                Our Projects
-            </h2>
-            <div class="flex flex-wrap justify-center">
-                <a class="w-full md:w-1/3 p-4 card" href="project">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="A modern commercial building" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/seYcKjF8wP_Wk6O1puBWMiqbQI2rmvp166DUnlAtO8g.jpg" width="300" />
-                        <h3 class="text-xl font-bold mb-2">
-                            Commercial Building
-                        </h3>
-                        <p class="text-gray-700">
+    <section class="py-16 bg-gray-100 fade-in">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Our Projects</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Explore our diverse portfolio of successful projects across various sectors
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Commercial Project -->
+                <div class="group relative overflow-hidden rounded-xl">
+                    <div class="relative overflow-hidden">
+                        <img
+                            src="https://storage.googleapis.com/a1aa/image/seYcKjF8wP_Wk6O1puBWMiqbQI2rmvp166DUnlAtO8g.jpg"
+                            alt="Commercial Building"
+                            class="w-full h-[300px] object-cover transform group-hover:scale-110 transition duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-6 group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-xl font-bold mb-2">Commercial Building</h3>
+                        <p class="text-sm text-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 delay-100">
                             A state-of-the-art commercial building designed and managed by our expert team.
                         </p>
+                        <a href="project" class="inline-flex items-center mt-4 text-blue-400 hover:text-blue-300">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
                     </div>
-                </a>
-                <a class="w-full md:w-1/3 p-4 card" href="project">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="A luxury residential complex" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/fV8LLHNOLa443yshurbQ0Zy-uUJeUW_YsVfNbFbJ5zY.jpg" width="300" />
-                        <h3 class="text-xl font-bold mb-2">
-                            Residential Complex
-                        </h3>
-                        <p class="text-gray-700">
+                </div>
+
+                <!-- Residential Project -->
+                <div class="group relative overflow-hidden rounded-xl">
+                    <div class="relative overflow-hidden">
+                        <img
+                            src="https://storage.googleapis.com/a1aa/image/fV8LLHNOLa443yshurbQ0Zy-uUJeUW_YsVfNbFbJ5zY.jpg"
+                            alt="Residential Complex"
+                            class="w-full h-[300px] object-cover transform group-hover:scale-110 transition duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-6 group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-xl font-bold mb-2">Residential Complex</h3>
+                        <p class="text-sm text-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 delay-100">
                             A luxury residential complex featuring modern amenities and sustainable design.
                         </p>
+                        <a href="project" class="inline-flex items-center mt-4 text-blue-400 hover:text-blue-300">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
                     </div>
-                </a>
-                <a class="w-full md:w-1/3 p-4 card" href="project">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="An industrial facility with machinery" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/BRMUZitZ8CbAo1ZZYxgEj4kBzBMkBLsMyNtW5sEl5Z8.jpg" width="300" />
-                        <h3 class="text-xl font-bold mb-2">
-                            Industrial Facility
-                        </h3>
-                        <p class="text-gray-700">
-                            A high-tech industrial facility built to meet the needs of modern manufacturing.
+                </div>
+
+                <!-- Industrial Project -->
+                <div class="group relative overflow-hidden rounded-xl">
+                    <div class="relative overflow-hidden">
+                        <img
+                            src="https://storage.googleapis.com/a1aa/image/BRMUZitZ8CbAo1ZZYxgEj4kBzBMkBLsMyNtW5sEl5Z8.jpg"
+                            alt="Industrial Facility"
+                            class="w-full h-[300px] object-cover transform group-hover:scale-110 transition duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-6 group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-xl font-bold mb-2">Industrial Facility</h3>
+                        <p class="text-sm text-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 delay-100">
+                            A high-tech industrial facility built to meet modern manufacturing needs.
                         </p>
+                        <a href="project" class="inline-flex items-center mt-4 text-blue-400 hover:text-blue-300">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
                     </div>
+                </div>
+            </div>
+
+            <!-- View All Projects Button -->
+            <div class="text-center mt-12">
+                <a href="project" class="inline-flex items-center px-8 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300 group">
+                    <span>View All Projects</span>
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
                 </a>
             </div>
         </div>
@@ -656,31 +760,113 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-6">
-        <div class="container mx-auto text-center text-gray-300 px-6">
-            <p class="text-sm md:text-base">
-                © 2022 Mandajaya Rekayasa Konstruksi. All rights reserved.
-            </p>
-            <p class="mt-2 text-sm md:text-base leading-tight">
-                Jl. Kota Mas 1 No.18, Kota Cimahi, Jawa Barat, 40511
-            </p>
-            <div class="flex justify-center gap-3 mt-4 flex-wrap">
-                <a class="text-gray-300 hover:text-white text-lg" href="https://www.facebook.com/profile.php?id=61569553317515">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a class="text-gray-300 hover:text-white text-lg" href="#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a class="text-gray-300 hover:text-white text-lg" href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a class="text-gray-300 hover:text-white text-lg" href="https://www.instagram.com/mandajaya_rekayasa_konstruksi?igsh=MW1kdTFxb2kycWNheg==">
-                    <i class="fab fa-instagram"></i>
-                </a>
+    <footer class="bg-gray-900 text-gray-300">
+        <!-- Main Footer -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="{{ asset('storage/Logo FI.png') }}" alt="MRK Logo" class="h-10 w-10">
+                        <h3 class="text-xl font-bold text-white">Mandajaya Rekayasa Konstruksi</h3>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Providing top-notch construction consulting services with a commitment to excellence, innovation, and client satisfaction.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="/" class="text-gray-400 hover:text-blue-400 transition duration-300">Home</a>
+                        </li>
+                        <li>
+                            <a href="service" class="text-gray-400 hover:text-blue-400 transition duration-300">Services</a>
+                        </li>
+                        <li>
+                            <a href="project" class="text-gray-400 hover:text-blue-400 transition duration-300">Projects</a>
+                        </li>
+                        <li>
+                            <a href="team" class="text-gray-400 hover:text-blue-400 transition duration-300">Our Team</a>
+                        </li>
+                        <li>
+                            <a href="client" class="text-gray-400 hover:text-blue-400 transition duration-300">Clients</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-blue-400"></i>
+                            <span class="text-gray-400">Jl. Kota Mas 1 No.18, Kota Cimahi, Jawa Barat, 40511</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-blue-400"></i>
+                            <span class="text-gray-400">+62 22-2335599</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-blue-400"></i>
+                            <a href="mailto:info@mandajaya.com" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                                info@mandajaya.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Media & Newsletter -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="https://www.facebook.com/profile.php?id=61569553317515"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mandajaya_rekayasa_konstruksi?igsh=MW1kdTFxb2kycWNheg=="
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+
+                    <!-- Company Profile Button -->
+                    <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing"
+                        target="_blank"
+                        class="inline-flex items-center space-x-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                        <i class="fas fa-download"></i>
+                        <span>Download Company Profile</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800">
+            <div class="container mx-auto px-4 py-6">
+                <div class="md:flex md:items-center md:justify-between text-sm">
+                    <div class="text-center md:text-left">
+                        <p>&copy; 2022 Mandajaya Rekayasa Konstruksi. All rights reserved.</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-center md:text-right">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 mx-2">Privacy Policy</a>
+                        <span class="text-gray-600">|</span>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 mx-2">Terms of Service</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-
     <script>
         // Hero Section Carousel
         let currentHeroSlide = 0;
@@ -772,6 +958,15 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+            });
+
+            document.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
             });
         });
     </script>

@@ -30,31 +30,105 @@
             transform: translateY(-10px);
             transition: transform 0.3s ease-in-out;
         }
+
+        .navbar {
+            background: rgba(17, 24, 39, 0.95);
+            backdrop-filter: blur(8px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            background: rgba(17, 24, 39, 0.98);
+        }
+
+        .nav-link {
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .company-logo {
+            transition: transform 0.3s ease;
+        }
+
+        .company-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .team-card {
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
     </style>
 </head>
 
 <body class="font-roboto">
     <!-- Navbar -->
-    <nav class="bg-gray-900 p-4 shadow-lg">
+    <nav class="navbar p-4 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <img alt="Company logo" class="h-10 w-10" src="{{ asset('storage/Logo FI.png') }}" />
-                <a class="text-white text-2xl font-bold tracking-wide hover:text-blue-400 transition duration-300" href="/">
-                    Mandajaya Rekayasa Konstruksi
+                <img alt="Company logo" class="h-12 w-12 company-logo" src="{{ asset('storage/Logo FI.png') }}" />
+                <a class="text-white text-2xl font-bold tracking-wide hover:text-blue-400 transition duration-300 group" href="/">
+                    <span class="text-white group-hover:text-blue-500 transition duration-300">Mandajaya</span> Rekayasa Konstruksi
                 </a>
             </div>
+
             <!-- Desktop Menu -->
-            <ul class="hidden md:flex space-x-6 items-center">
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="/">Home</a></li>
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="service">Services</a></li>
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="project">Projects</a></li>
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="team">Our Team</a></li>
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="client">Clients</a></li>
-                <li><a class="text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
-                <!-- Company Profile Button -->
+            <ul class="hidden md:flex space-x-8 items-center">
+                <li><a class="nav-link text-gray-300 hover:text-blue-400 transition duration-300" href="/">Home</a></li>
+                <li><a class="nav-link text-gray-300 hover:text-blue-400 transition duration-300" href="service">Services</a></li>
+                <li><a class="nav-link text-gray-300 hover:text-blue-400 transition duration-300" href="project">Projects</a></li>
+                <li><a class="nav-link text-gray-300 hover:text-blue-400 transition duration-300" href="team">Our Team</a></li>
+                <li><a class="nav-link text-gray-300 hover:text-blue-400 transition duration-300" href="client">Clients</a></li>
+                <li><a class="nav-link text-gray-300 hover:text-blue-400 transition duration-300" href="contact">Contact Us</a></li>
                 <li>
-                    <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing" target="_blank" class="border border-blue-500 text-blue-500 px-5 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300 flex items-center">
-                        Company Profile
+                    <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing"
+                        target="_blank"
+                        class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300 flex items-center space-x-2">
+                        <span>Company Profile</span>
+                        <i class="fas fa-external-link-alt text-sm"></i>
                     </a>
                 </li>
             </ul>
@@ -82,13 +156,320 @@
         </ul>
     </nav>
     <!-- Our Team Section -->
-    <section class="py-12 bg-gray-100 fade-in">
+    <section class="py-16 bg-gradient-to-b from-gray-100 to-white fade-in mt-24"> <!-- Added mt-24 for spacing -->
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Meet Our Team</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Our diverse team of experts brings together years of experience and dedication to deliver exceptional results
+                </p>
+            </div>
+
+            <!-- Leadership Team -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-8 text-center">Leadership Team</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Leaders Card Template -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-xl bg-white shadow-lg transform hover:-translate-y-2 transition duration-500">
+                            <div class="relative h-80">
+                                <img alt="Portrait of John Doe, Founder and CEO"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                                    src="https://storage.googleapis.com/a1aa/image/Z4uwvphkmZKGGoxWqyz4DmpIBef1kzfxJkmLfpo2n9c.jpg" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-1">John Doe</h3>
+                                <p class="text-blue-500 font-semibold mb-3">Founder & CEO</p>
+                                <p class="text-gray-600 text-sm mb-4">
+                                    John has over 20 years of experience in the construction industry and is the visionary behind our company.
+                                </p>
+                                <div class="flex space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for other leadership team members -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-xl bg-white shadow-lg transform hover:-translate-y-2 transition duration-500">
+                            <div class="relative h-80">
+                                <img alt="Portrait of John Doe, Founder and CEO"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                                    src="https://storage.googleapis.com/a1aa/image/Z4uwvphkmZKGGoxWqyz4DmpIBef1kzfxJkmLfpo2n9c.jpg" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-1">John Doe</h3>
+                                <p class="text-blue-500 font-semibold mb-3">Founder & CEO</p>
+                                <p class="text-gray-600 text-sm mb-4">
+                                    John has over 20 years of experience in the construction industry and is the visionary behind our company.
+                                </p>
+                                <div class="flex space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-xl bg-white shadow-lg transform hover:-translate-y-2 transition duration-500">
+                            <div class="relative h-80">
+                                <img alt="Portrait of John Doe, Founder and CEO"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                                    src="https://storage.googleapis.com/a1aa/image/Z4uwvphkmZKGGoxWqyz4DmpIBef1kzfxJkmLfpo2n9c.jpg" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-1">John Doe</h3>
+                                <p class="text-blue-500 font-semibold mb-3">Founder & CEO</p>
+                                <p class="text-gray-600 text-sm mb-4">
+                                    John has over 20 years of experience in the construction industry and is the visionary behind our company.
+                                </p>
+                                <div class="flex space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experts Section -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-8 text-center">Our Experts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Expert Card Template -->
+                    <div class="group">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                            <div class="relative h-64">
+                                <img alt="Portrait of Expert"
+                                    class="w-full h-full object-cover"
+                                    src="https://storage.googleapis.com/a1aa/image/58_rJirqJUCrFjbK-JRYxNxdVa23JJFoGCIq08HRlb4.jpg" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="absolute bottom-4 left-4 text-white">
+                                        <p class="text-sm font-medium">Project Manager</p>
+                                        <p class="text-xs opacity-75">15+ years experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold mb-1">John Doe</h4>
+                                <p class="text-sm text-gray-600">Specializes in large-scale construction management</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for other experts -->
+                    <div class="group">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                            <div class="relative h-64">
+                                <img alt="Portrait of Expert"
+                                    class="w-full h-full object-cover"
+                                    src="https://storage.googleapis.com/a1aa/image/58_rJirqJUCrFjbK-JRYxNxdVa23JJFoGCIq08HRlb4.jpg" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="absolute bottom-4 left-4 text-white">
+                                        <p class="text-sm font-medium">Project Manager</p>
+                                        <p class="text-xs opacity-75">15+ years experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold mb-1">John Doe</h4>
+                                <p class="text-sm text-gray-600">Specializes in large-scale construction management</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                            <div class="relative h-64">
+                                <img alt="Portrait of Expert"
+                                    class="w-full h-full object-cover"
+                                    src="https://storage.googleapis.com/a1aa/image/58_rJirqJUCrFjbK-JRYxNxdVa23JJFoGCIq08HRlb4.jpg" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="absolute bottom-4 left-4 text-white">
+                                        <p class="text-sm font-medium">Project Manager</p>
+                                        <p class="text-xs opacity-75">15+ years experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold mb-1">John Doe</h4>
+                                <p class="text-sm text-gray-600">Specializes in large-scale construction management</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                            <div class="relative h-64">
+                                <img alt="Portrait of Expert"
+                                    class="w-full h-full object-cover"
+                                    src="https://storage.googleapis.com/a1aa/image/58_rJirqJUCrFjbK-JRYxNxdVa23JJFoGCIq08HRlb4.jpg" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="absolute bottom-4 left-4 text-white">
+                                        <p class="text-sm font-medium">Project Manager</p>
+                                        <p class="text-xs opacity-75">15+ years experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold mb-1">John Doe</h4>
+                                <p class="text-sm text-gray-600">Specializes in large-scale construction management</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                            <div class="relative h-64">
+                                <img alt="Portrait of Expert"
+                                    class="w-full h-full object-cover"
+                                    src="https://storage.googleapis.com/a1aa/image/58_rJirqJUCrFjbK-JRYxNxdVa23JJFoGCIq08HRlb4.jpg" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="absolute bottom-4 left-4 text-white">
+                                        <p class="text-sm font-medium">Project Manager</p>
+                                        <p class="text-xs opacity-75">15+ years experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold mb-1">John Doe</h4>
+                                <p class="text-sm text-gray-600">Specializes in large-scale construction management</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                            <div class="relative h-64">
+                                <img alt="Portrait of Expert"
+                                    class="w-full h-full object-cover"
+                                    src="https://storage.googleapis.com/a1aa/image/58_rJirqJUCrFjbK-JRYxNxdVa23JJFoGCIq08HRlb4.jpg" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="absolute bottom-4 left-4 text-white">
+                                        <p class="text-sm font-medium">Project Manager</p>
+                                        <p class="text-xs opacity-75">15+ years experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold mb-1">John Doe</h4>
+                                <p class="text-sm text-gray-600">Specializes in large-scale construction management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Staff Section -->
+            <div>
+                <h3 class="text-2xl font-bold mb-8 text-center">Supporting Team</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Staff Card Template -->
+                    <div class="group">
+                        <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
+                            <div class="relative w-20 h-20 mx-auto mb-3">
+                                <img alt="Staff Member"
+                                    class="w-full h-full object-cover rounded-full"
+                                    src="https://storage.googleapis.com/a1aa/image/Koaws9GC3mBe5rIzrAdn9ELXnUdG7b7D6mlPuAdNyNA.jpg" />
+                            </div>
+                            <div class="text-center">
+                                <h4 class="font-semibold mb-1">Sarah Johnson</h4>
+                                <p class="text-sm text-gray-500">Financial Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for other staff members -->
+                    <div class="group">
+                        <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
+                            <div class="relative w-20 h-20 mx-auto mb-3">
+                                <img alt="Staff Member"
+                                    class="w-full h-full object-cover rounded-full"
+                                    src="https://storage.googleapis.com/a1aa/image/Koaws9GC3mBe5rIzrAdn9ELXnUdG7b7D6mlPuAdNyNA.jpg" />
+                            </div>
+                            <div class="text-center">
+                                <h4 class="font-semibold mb-1">Sarah Johnson</h4>
+                                <p class="text-sm text-gray-500">Financial Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
+                            <div class="relative w-20 h-20 mx-auto mb-3">
+                                <img alt="Staff Member"
+                                    class="w-full h-full object-cover rounded-full"
+                                    src="https://storage.googleapis.com/a1aa/image/Koaws9GC3mBe5rIzrAdn9ELXnUdG7b7D6mlPuAdNyNA.jpg" />
+                            </div>
+                            <div class="text-center">
+                                <h4 class="font-semibold mb-1">Sarah Johnson</h4>
+                                <p class="text-sm text-gray-500">Financial Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
+                            <div class="relative w-20 h-20 mx-auto mb-3">
+                                <img alt="Staff Member"
+                                    class="w-full h-full object-cover rounded-full"
+                                    src="https://storage.googleapis.com/a1aa/image/Koaws9GC3mBe5rIzrAdn9ELXnUdG7b7D6mlPuAdNyNA.jpg" />
+                            </div>
+                            <div class="text-center">
+                                <h4 class="font-semibold mb-1">Sarah Johnson</h4>
+                                <p class="text-sm text-gray-500">Financial Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
+                            <div class="relative w-20 h-20 mx-auto mb-3">
+                                <img alt="Staff Member"
+                                    class="w-full h-full object-cover rounded-full"
+                                    src="https://storage.googleapis.com/a1aa/image/Koaws9GC3mBe5rIzrAdn9ELXnUdG7b7D6mlPuAdNyNA.jpg" />
+                            </div>
+                            <div class="text-center">
+                                <h4 class="font-semibold mb-1">Sarah Johnson</h4>
+                                <p class="text-sm text-gray-500">Financial Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
+                            <div class="relative w-20 h-20 mx-auto mb-3">
+                                <img alt="Staff Member"
+                                    class="w-full h-full object-cover rounded-full"
+                                    src="https://storage.googleapis.com/a1aa/image/Koaws9GC3mBe5rIzrAdn9ELXnUdG7b7D6mlPuAdNyNA.jpg" />
+                            </div>
+                            <div class="text-center">
+                                <h4 class="font-semibold mb-1">Sarah Johnson</h4>
+                                <p class="text-sm text-gray-500">Financial Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="py-12 bg-gray-100 fade-in">
         <div class="container mx-auto text-center px-4">
             <h2 class="text-3xl font-bold mb-6">
                 Our Team
-            </h2>
-            <!-- Founders -->
-            <h3 class="text-2xl font-bold mb-4">
+            </h2> -->
+    <!-- Founders -->
+    <!-- <h3 class="text-2xl font-bold mb-4">
                 Founders
             </h3>
             <div class="flex flex-wrap justify-center mb-12">
@@ -134,57 +515,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <!-- Advisors -->
-            <!-- <h3 class="text-2xl font-bold mb-4">
-                Advisors
-            </h3>
-            <div class="flex flex-wrap justify-center mb-12">
-                <div class="w-full md:w-1/3 p-4 card">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="Portrait of Emily Davis, Advisor" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/AIZerADyQsRi9oZY7PMTN7FfedpL3cwQaSTqYDxQQLU.jpg" width="300" />
-                        <h3 class="text-xl font-bold mb-2">
-                            Emily Davis
-                        </h3>
-                        <p class="text-gray-700 mb-2">
-                            Advisor
-                        </p>
-                        <p class="text-gray-700">
-                            Emily provides strategic advice and guidance to help steer the company towards success.
-                        </p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/3 p-4 card">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="Portrait of David Wilson, Advisor" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/iITL6fdse-w44lfAVMO2nNSZZG2r4EAmggeYe4UUZQA.jpg" width="300" />
-                        <h3 class="text-xl font-bold mb-2">
-                            David Wilson
-                        </h3>
-                        <p class="text-gray-700 mb-2">
-                            Advisor
-                        </p>
-                        <p class="text-gray-700">
-                            David brings a wealth of experience in quality assurance and project management.
-                        </p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/3 p-4 card">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img alt="Portrait of Sarah Johnson, Advisor" class="w-full h-48 object-cover mb-4" height="192" src="https://storage.googleapis.com/a1aa/image/DncF6qXAbLwa_VpqftcLgf59HttfwBQeFsmxse98Yck.jpg" width="300" />
-                        <h3 class="text-xl font-bold mb-2">
-                            Sarah Johnson
-                        </h3>
-                        <p class="text-gray-700 mb-2">
-                            Advisor
-                        </p>
-                        <p class="text-gray-700">
-                            Sarah provides financial analysis and strategic planning expertise.
-                        </p>
-                    </div>
-                </div>
             </div> -->
-            <!-- Experts -->
-            <h3 class="text-2xl font-bold mb-4">
+    <!-- Experts -->
+    <!-- <h3 class="text-2xl font-bold mb-4">
                 Experts
             </h3>
             <div class="flex flex-wrap justify-center mb-12">
@@ -258,9 +591,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <!-- Staff -->
-            <h3 class="text-2xl font-bold mb-4">
+            </div> -->
+    <!-- Staff -->
+    <!-- <h3 class="text-2xl font-bold mb-4">
                 Staff
             </h3>
             <div class="flex flex-wrap justify-center">
@@ -350,33 +683,112 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Footer -->
-    <footer class="bg-gray-800 py-6">
-        <div class="container mx-auto text-center text-gray-300 px-4">
-            <p>
-                © 2022 Mandajaya Rekayasa Konstruksi. All rights reserved.
-            </p>
-            <p class="mt-2">
-                Jl.Kota Mas 1 no.18 - Kota Cimahi - Jawa Barat - 40511
-            </p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a class="text-gray-300 hover:text-white" href="https://www.facebook.com/profile.php?id=61569553317515">
-                    <i class="fab fa-facebook-f">
-                    </i>
-                </a>
-                <a class="text-gray-300 hover:text-white" href="#">
-                    <i class="fab fa-twitter">
-                    </i>
-                </a>
-                <a class="text-gray-300 hover:text-white" href="#">
-                    <i class="fab fa-linkedin-in">
-                    </i>
-                </a>
-                <a class="text-gray-300 hover:text-white" href="https://www.instagram.com/mandajaya_rekayasa_konstruksi?igsh=MW1kdTFxb2kycWNheg==">
-                    <i class="fab fa-instagram">
-                    </i>
-                </a>
+    <footer class="bg-gray-900 text-gray-300">
+        <!-- Main Footer -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="{{ asset('storage/Logo FI.png') }}" alt="MRK Logo" class="h-10 w-10">
+                        <h3 class="text-xl font-bold text-white">Mandajaya Rekayasa Konstruksi</h3>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Providing top-notch construction consulting services with a commitment to excellence, innovation, and client satisfaction.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="/" class="text-gray-400 hover:text-blue-400 transition duration-300">Home</a>
+                        </li>
+                        <li>
+                            <a href="service" class="text-gray-400 hover:text-blue-400 transition duration-300">Services</a>
+                        </li>
+                        <li>
+                            <a href="project" class="text-gray-400 hover:text-blue-400 transition duration-300">Projects</a>
+                        </li>
+                        <li>
+                            <a href="team" class="text-gray-400 hover:text-blue-400 transition duration-300">Our Team</a>
+                        </li>
+                        <li>
+                            <a href="client" class="text-gray-400 hover:text-blue-400 transition duration-300">Clients</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-blue-400"></i>
+                            <span class="text-gray-400">Jl. Kota Mas 1 No.18, Kota Cimahi, Jawa Barat, 40511</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-blue-400"></i>
+                            <span class="text-gray-400">+62 22-2335599</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-blue-400"></i>
+                            <a href="mailto:info@mandajaya.com" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                                info@mandajaya.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Media & Newsletter -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="https://www.facebook.com/profile.php?id=61569553317515"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mandajaya_rekayasa_konstruksi?igsh=MW1kdTFxb2kycWNheg=="
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+
+                    <!-- Company Profile Button -->
+                    <a href="https://drive.google.com/file/d/1_OuB8-CuDZPOWyo8zdetd3FRSMIm29gJ/view?usp=sharing"
+                        target="_blank"
+                        class="inline-flex items-center space-x-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                        <i class="fas fa-download"></i>
+                        <span>Download Company Profile</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800">
+            <div class="container mx-auto px-4 py-6">
+                <div class="md:flex md:items-center md:justify-between text-sm">
+                    <div class="text-center md:text-left">
+                        <p>&copy; 2022 Mandajaya Rekayasa Konstruksi. All rights reserved.</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-center md:text-right">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 mx-2">Privacy Policy</a>
+                        <span class="text-gray-600">|</span>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 mx-2">Terms of Service</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
