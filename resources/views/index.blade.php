@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <title>
         Mandajaya Rekayasa Konstruksi
     </title>
@@ -241,7 +242,7 @@
             <div class="flex items-center space-x-3">
                 <img alt="Company logo" class="h-12 w-12 company-logo" src="{{ asset('storage/Logo FI.png') }}" />
                 <a class="text-white text-2xl font-bold tracking-wide hover:text-blue-400 transition duration-300 group" href="/">
-                    <span class="text-white group-hover:text-blue-500 transition duration-300">Mandajaya</span> Rekayasa Konstruksi
+                    <span class="text-white group-hover:text-yellow-500 transition duration-300">Mandajaya Rekayasa Konstruksi</span> 
                 </a>
             </div>
 
@@ -629,8 +630,8 @@
                 <!-- Project Management -->
                 <div class="group">
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                        <div class="w-16 h-16 bg-blue-50 rounded-lg mb-6 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
-                            <i class="fas fa-hard-hat text-3xl text-blue-500 group-hover:text-white transition-colors duration-300"></i>
+                        <div class="w-16 h-16 bg-blue-50 rounded-lg mb-6 flex items-center justify-center group-hover:bg-orange-500 transition-colors duration-300">
+                            <i class="fas fa-hard-hat text-3xl text-orange-500 group-hover:text-white transition-colors duration-300"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-4">Project Management</h3>
                         <p class="text-gray-600 leading-relaxed">
@@ -642,8 +643,8 @@
                 <!-- Design Consultation -->
                 <div class="group">
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                        <div class="w-16 h-16 bg-blue-50 rounded-lg mb-6 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
-                            <i class="fas fa-drafting-compass text-3xl text-blue-500 group-hover:text-white transition-colors duration-300"></i>
+                        <div class="w-16 h-16 bg-blue-50 rounded-lg mb-6 flex items-center justify-center group-hover:bg-orange-500 transition-colors duration-300">
+                            <i class="fas fa-drafting-compass text-3xl text-orange-500 group-hover:text-white transition-colors duration-300"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-4">Design Consultation</h3>
                         <p class="text-gray-600 leading-relaxed">
@@ -655,8 +656,8 @@
                 <!-- Construction Supervision -->
                 <div class="group">
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                        <div class="w-16 h-16 bg-blue-50 rounded-lg mb-6 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
-                            <i class="fas fa-tools text-3xl text-blue-500 group-hover:text-white transition-colors duration-300"></i>
+                        <div class="w-16 h-16 bg-blue-50 rounded-lg mb-6 flex items-center justify-center group-hover:bg-orange-500 transition-colors duration-300">
+                            <i class="fas fa-tools text-3xl text-orange-500 group-hover:text-white transition-colors duration-300"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-4">Construction Supervision</h3>
                         <p class="text-gray-600 leading-relaxed">
@@ -668,8 +669,8 @@
                 <!-- Quality Assurance -->
                 <div class="group">
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                        <div class="w-16 h-16 bg-blue-50 rounded-lg mb-6 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
-                            <i class="fas fa-building text-3xl text-blue-500 group-hover:text-white transition-colors duration-300"></i>
+                        <div class="w-16 h-16 bg-blue-50 rounded-lg mb-6 flex items-center justify-center group-hover:bg-orange-500 transition-colors duration-300">
+                            <i class="fas fa-building text-3xl text-orange-500 group-hover:text-white transition-colors duration-300"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-4">Quality Assurance</h3>
                         <p class="text-gray-600 leading-relaxed">
@@ -683,21 +684,21 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Cost Estimation -->
                 <div class="bg-white p-6 rounded-xl shadow-lg group hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                    <i class="fas fa-chart-line text-3xl text-blue-500 mb-4"></i>
+                    <i class="fas fa-chart-line text-3xl text-orange-500 mb-4"></i>
                     <h3 class="text-lg font-bold mb-2">Cost Estimation</h3>
                     <p class="text-gray-600 text-sm">Accurate project cost analysis and budgeting</p>
                 </div>
 
                 <!-- Contract Administration -->
                 <div class="bg-white p-6 rounded-xl shadow-lg group hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                    <i class="fas fa-file-contract text-3xl text-blue-500 mb-4"></i>
+                    <i class="fas fa-file-contract text-3xl text-orange-500 mb-4"></i>
                     <h3 class="text-lg font-bold mb-2">Contract Administration</h3>
                     <p class="text-gray-600 text-sm">Comprehensive contract management services</p>
                 </div>
 
                 <!-- Sustainability Consulting -->
                 <div class="bg-white p-6 rounded-xl shadow-lg group hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                    <i class="fas fa-recycle text-3xl text-blue-500 mb-4"></i>
+                    <i class="fas fa-recycle text-3xl text-orange-500 mb-4"></i>
                     <h3 class="text-lg font-bold mb-2">Sustainability Consulting</h3>
                     <p class="text-gray-600 text-sm">Green building and sustainable development solutions</p>
                 </div>
@@ -705,7 +706,7 @@
 
             <!-- Call to Action -->
             <div class="text-center mt-12">
-                <a href="service" class="inline-flex items-center px-8 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">
+                <a href="service" class="inline-flex items-center px-8 py-3 bg-blue-500 text-white rounded-full hover:bg-orange-600 transition duration-300">
                     <span>View All Services</span>
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>

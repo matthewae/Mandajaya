@@ -16,7 +16,7 @@ use App\Mail\ContactMail;
 */
 
 // Home Routes
-Route::group(['prefix' => '/'], function () {
+// Route::group(['prefix' => '/'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('about', [HomeController::class, 'about'])->name('about');
     Route::get('project', [HomeController::class, 'project'])->name('project');
@@ -25,8 +25,7 @@ Route::group(['prefix' => '/'], function () {
     Route::get('service', [HomeController::class, 'service'])->name('service');
     Route::get('contact', [HomeController::class, 'contact'])->name('contact');
     Route::get('vision', [HomeController::class, 'vision'])->name('vision');
-});
-
+    
 // Contact Form Route
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
