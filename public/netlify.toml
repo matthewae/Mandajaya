@@ -1,16 +1,16 @@
 [build]
-  command = "npm run build && composer install"
-  publish = "public"
-  functions = "functions"
+command = "composer install --no-dev && npm run build" # Correct order!
+publish = "public"
+functions = "functions"
 
 [build.environment]
-  PHP_VERSION = "8.1"
-  NODE_VERSION = "18.17.0"
+PHP_VERSION = "8.1"
+NODE_VERSION = "18.17.0"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.php"
-  status = 200
+from = "/*"
+to = "/index.php"
+status = 200
 
 [functions]
-  directory = "functions"
+directory = "functions"
